@@ -99,6 +99,7 @@ export function FormDemo() {
       <div className="flex flex-col items-start gap-6">
         <Form {...form}>
           <form
+            noValidate
             onSubmit={(e) => void form.handleSubmit(onSubmit)(e)}
             className="w-full max-w-sm space-y-6"
           >
