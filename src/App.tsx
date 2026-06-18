@@ -29,6 +29,7 @@ import { TabsDemo } from "@/pages/demos/TabsDemo"
 import { SortableTabsDemo } from "@/pages/demos/SortableTabsDemo"
 import { ResizableDemo } from "@/pages/demos/ResizableDemo"
 import { ScrollAreaDemo } from "@/pages/demos/ScrollAreaDemo"
+import { DataTableDemo } from "@/pages/demos/DataTableDemo"
 
 function App() {
   return (
@@ -63,6 +64,7 @@ function App() {
           <Route path="/components/sortable-tabs" element={<SortableTabsDemo />} />
           <Route path="/components/resizable" element={<ResizableDemo />} />
           <Route path="/components/scroll-area" element={<ScrollAreaDemo />} />
+          <Route path="/components/data-table" element={<DataTableDemo />} />
         </Routes>
       </main>
       <Footer />

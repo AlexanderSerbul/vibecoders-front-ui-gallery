@@ -52,6 +52,11 @@ export const componentGroups: ComponentGroup[] = [
     ],
   },
   {
+    label: "Таблицы",
+    description: "Отображение данных в таблицах: сортировка, фильтр, пагинация.",
+    items: [{ to: "/components/data-table", label: "Data Table" }],
+  },
+  {
     label: "Выбор",
     description: "Выбрать один вариант из нескольких.",
     items: [
