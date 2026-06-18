@@ -48,7 +48,7 @@ The flat config (`eslint.config.js`) lints `.ts`/`.tsx` with **`typescript-eslin
 `npm run test:e2e` runs the Playwright suite in `e2e/`:
 
 - **`smoke.spec.ts`** — **data-driven from `componentGroups`** (the same source the nav uses) plus the landing `/`: visits every route, asserts `main h1` is visible, and fails on any `console.error` or uncaught `pageerror`. Add a demo to `componentGroups` and it's covered automatically — no test edits.
-- **`data-table.spec.ts`** — interaction tests for the `Data Table` (pagination, sorting, filtering, row-selection); these couple to that demo's hardcoded data.
+- **Per-component interaction specs** — one file per component (`toggle.spec.ts`, `switch.spec.ts`, `checkbox.spec.ts`, `radio-group.spec.ts`, `data-table.spec.ts`, …) exercising real behaviour (click / select / validate) and asserting state via ARIA (`aria-pressed` / `aria-checked` / `aria-checked="mixed"`) plus on-screen effects. Added incrementally, simplest-first; each couples to its demo's data.
 
 `playwright.config.ts` targets the dev server via `webServer` (starts one on :5173, or **reuses** a running one). The Playwright files (`playwright.config.ts`, `e2e/`) are added to `tsconfig.node.json`'s `include`, so `tsc` and ESLint cover them too (otherwise the type-aware lint's project service errors on files outside every tsconfig). First run needs the browser once: `npx playwright install chromium`. Artifacts (`test-results/`, `playwright-report/`) are git-ignored.
 
