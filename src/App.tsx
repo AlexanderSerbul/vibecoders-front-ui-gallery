@@ -1,7 +1,6 @@
 import { Route, Routes } from "react-router-dom"
 
-import { Footer } from "@/components/Footer"
-import { Navbar } from "@/components/Navbar"
+import { MainLayout } from "@/components/MainLayout"
 import { Toaster } from "@/components/ui/sonner"
 import { Home } from "@/pages/Home"
 import { DialogDemo } from "@/pages/demos/DialogDemo"
@@ -35,13 +34,14 @@ import { ChartDemo } from "@/pages/demos/ChartDemo"
 import { CarouselDemo } from "@/pages/demos/CarouselDemo"
 import { AvatarDemo } from "@/pages/demos/AvatarDemo"
 import { ToastDemo } from "@/pages/demos/ToastDemo"
+import { SidebarDemo } from "@/pages/demos/SidebarDemo"
 
 function App() {
   return (
-    <div className="flex min-h-svh flex-col">
-      <Navbar />
-      <main className="flex-1">
-        <Routes>
+    <>
+      <Routes>
+        {/* Gallery routes share the navbar + footer chrome. */}
+        <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/components/dialog" element={<DialogDemo />} />
           <Route path="/components/sheet" element={<SheetDemo />} />
@@ -65,8 +65,11 @@ function App() {
           <Route path="/components/input-otp" element={<InputOTPDemo />} />
           <Route path="/components/accordion" element={<AccordionDemo />} />
           <Route path="/components/collapsible" element={<CollapsibleDemo />} />
+          <Route
+            path="/components/sortable-tabs"
+            element={<SortableTabsDemo />}
+          />
           <Route path="/components/tabs" element={<TabsDemo />} />
-          <Route path="/components/sortable-tabs" element={<SortableTabsDemo />} />
           <Route path="/components/resizable" element={<ResizableDemo />} />
           <Route path="/components/scroll-area" element={<ScrollAreaDemo />} />
           <Route path="/components/data-table" element={<DataTableDemo />} />
@@ -74,11 +77,13 @@ function App() {
           <Route path="/components/carousel" element={<CarouselDemo />} />
           <Route path="/components/avatar" element={<AvatarDemo />} />
           <Route path="/components/toast" element={<ToastDemo />} />
-        </Routes>
-      </main>
-      <Footer />
+        </Route>
+
+        {/* Sidebar is a full-page layout component, so it gets its own shell. */}
+        <Route path="/components/sidebar" element={<SidebarDemo />} />
+      </Routes>
       <Toaster richColors />
-    </div>
+    </>
   )
 }
 

@@ -72,4 +72,23 @@ export default defineConfig([
       'react-hooks/set-state-in-effect': 'off',
     },
   },
+
+  // The canonical shadcn Sidebar's loading skeleton picks a random placeholder
+  // width via Math.random() inside a useMemo — flagged by the React-Compiler
+  // purity rule, but it's a one-off cosmetic value, not real render state.
+  {
+    files: ['src/components/ui/sidebar.tsx'],
+    rules: {
+      'react-hooks/purity': 'off',
+    },
+  },
+
+  // The canonical useIsMobile hook seeds its viewport state with a setState in a
+  // mount effect (matchMedia sync) — the same intended external-system sync.
+  {
+    files: ['src/hooks/use-mobile.ts'],
+    rules: {
+      'react-hooks/set-state-in-effect': 'off',
+    },
+  },
 ])

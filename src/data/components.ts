@@ -51,6 +51,7 @@ export const componentGroups: ComponentGroup[] = [
       { to: "/components/resizable", label: "Resizable" },
       { to: "/components/scroll-area", label: "Scroll Area" },
       { to: "/components/carousel", label: "Carousel" },
+      { to: "/components/sidebar", label: "Sidebar" },
     ],
   },
   {
