@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom"
 import { MainLayout } from "@/components/MainLayout"
 import { Toaster } from "@/components/ui/sonner"
 import { Home } from "@/pages/Home"
+import { AboutProject } from "@/pages/AboutProject"
 import { DialogDemo } from "@/pages/demos/DialogDemo"
 import { SheetDemo } from "@/pages/demos/SheetDemo"
 import { DrawerDemo } from "@/pages/demos/DrawerDemo"
@@ -43,6 +44,7 @@ function App() {
         {/* Gallery routes share the navbar + footer chrome. */}
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutProject />} />
           <Route path="/components/dialog" element={<DialogDemo />} />
           <Route path="/components/sheet" element={<SheetDemo />} />
           <Route path="/components/drawer" element={<DrawerDemo />} />

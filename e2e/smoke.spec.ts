@@ -7,6 +7,7 @@ import { componentGroups } from "../src/data/components"
 // covered by this smoke test automatically, with no edits here.
 const routes = [
   { path: "/", label: "Home" },
+  { path: "/about", label: "About" },
   ...componentGroups.flatMap((group) =>
     group.items.map((item) => ({ path: item.to, label: item.label }))
   ),
