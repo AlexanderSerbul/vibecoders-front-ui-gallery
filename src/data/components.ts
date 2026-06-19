@@ -57,6 +57,11 @@ export const componentGroups: ComponentGroup[] = [
     items: [{ to: "/components/data-table", label: "Data Table" }],
   },
   {
+    label: "Графики",
+    description: "Визуализация данных диаграммами (на Recharts).",
+    items: [{ to: "/components/chart", label: "Chart" }],
+  },
+  {
     label: "Выбор",
     description: "Выбрать один вариант из нескольких.",
     items: [

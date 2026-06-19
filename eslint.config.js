@@ -48,4 +48,18 @@ export default defineConfig([
       'react-refresh/only-export-components': 'off',
     },
   },
+
+  // The canonical shadcn Chart wraps Recharts, whose types are loose (lots of
+  // `any` in tooltip/legend payloads), which trips the type-aware safety rules.
+  // Relax them for this one upstream file rather than editing it.
+  {
+    files: ['src/components/ui/chart.tsx'],
+    rules: {
+      '@typescript-eslint/no-unsafe-assignment': 'off',
+      '@typescript-eslint/no-unsafe-member-access': 'off',
+      '@typescript-eslint/no-unsafe-argument': 'off',
+      '@typescript-eslint/restrict-template-expressions': 'off',
+      '@typescript-eslint/no-unnecessary-type-assertion': 'off',
+    },
+  },
 ])
