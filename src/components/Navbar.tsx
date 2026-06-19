@@ -11,6 +11,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { componentGroups } from "@/data/components"
+import { cn } from "@/lib/utils"
 
 function useDarkMode() {
   const [dark, setDark] = useState(
@@ -29,7 +30,18 @@ export function Navbar() {
   const { pathname } = useLocation()
 
   return (
-    <header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur">
+    <header
+      className={cn(
+        "sticky top-0 z-50 border-b",
+        // On the Matrix About page the navbar drops its solid fill AND the
+        // backdrop-blur — backdrop-filter doesn't reliably composite the fixed
+        // -z-10 canvas behind it (e.g. in Opera it renders opaque), so instead
+        // we go plainly translucent and let the rain show through by z-order.
+        pathname === "/about"
+          ? "bg-background/20"
+          : "bg-background/80 backdrop-blur"
+      )}
+    >
       <div className="mx-auto max-w-6xl px-4 py-2">
         {/* Top row: brand on the left, utility cluster pinned top-right. */}
         <div className="flex items-center justify-between gap-2">
