@@ -1,9 +1,25 @@
+import { useEffect } from "react"
+
 import { MatrixRain } from "@/components/MatrixRain"
 
 export function AboutProject() {
+  // Force the dark theme on this page (and restore the previous setting on
+  // leave), so the navbar/footer go dark to match the full-screen Matrix
+  // backdrop — and the page's fallback background stays black, no white flash.
+  useEffect(() => {
+    const root = document.documentElement
+    const wasDark = root.classList.contains("dark")
+    root.classList.add("dark")
+    return () => {
+      if (!wasDark) root.classList.remove("dark")
+    }
+  }, [])
+
   return (
-    <section className="relative isolate flex min-h-svh items-center overflow-hidden bg-black">
-      <MatrixRain className="pointer-events-none absolute inset-0 -z-10 h-full w-full" />
+    <section className="flex min-h-svh items-center">
+      {/* fixed + behind everything (-z-10), so the rain also runs behind the
+          navbar/footer; they sit on top (the navbar as frosted glass). */}
+      <MatrixRain className="pointer-events-none fixed inset-0 -z-10 h-full w-full" />
 
       <div className="relative mx-auto w-full max-w-3xl px-4 py-16">
         <div className="rounded-2xl border border-green-500/20 bg-black/50 p-6 shadow-2xl backdrop-blur-sm sm:p-10">
