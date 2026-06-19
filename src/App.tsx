@@ -9,6 +9,7 @@ import { SheetDemo } from "@/pages/demos/SheetDemo"
 import { DrawerDemo } from "@/pages/demos/DrawerDemo"
 import { MenubarDemo } from "@/pages/demos/MenubarDemo"
 import { ContextMenuDemo } from "@/pages/demos/ContextMenuDemo"
+import { DropdownMenuDemo } from "@/pages/demos/DropdownMenuDemo"
 import { PopoverDemo } from "@/pages/demos/PopoverDemo"
 import { TooltipDemo } from "@/pages/demos/TooltipDemo"
 import { HoverCardDemo } from "@/pages/demos/HoverCardDemo"
@@ -50,6 +51,10 @@ function App() {
           <Route path="/components/drawer" element={<DrawerDemo />} />
           <Route path="/components/menubar" element={<MenubarDemo />} />
           <Route path="/components/context-menu" element={<ContextMenuDemo />} />
+          <Route
+            path="/components/dropdown-menu"
+            element={<DropdownMenuDemo />}
+          />
           <Route path="/components/popover" element={<PopoverDemo />} />
           <Route path="/components/tooltip" element={<TooltipDemo />} />
           <Route path="/components/hover-card" element={<HoverCardDemo />} />

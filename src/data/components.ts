@@ -33,8 +33,10 @@ export const componentGroups: ComponentGroup[] = [
   },
   {
     label: "Меню",
-    description: "Списки команд и действий: строка меню, контекст и палитра.",
+    description:
+      "Списки команд и действий: выпадающее меню, строка меню, контекст и палитра.",
     items: [
+      { to: "/components/dropdown-menu", label: "Dropdown Menu" },
       { to: "/components/menubar", label: "Menubar" },
       { to: "/components/context-menu", label: "Context Menu" },
       { to: "/components/command", label: "Command" },
