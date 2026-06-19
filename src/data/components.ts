@@ -14,11 +14,12 @@ export type ComponentGroup = {
 export const componentGroups: ComponentGroup[] = [
   {
     label: "Оверлеи",
-    description: "Окна поверх страницы: модальные диалоги и выезжающие панели.",
+    description: "Поверх страницы: диалоги, панели и уведомления.",
     items: [
       { to: "/components/dialog", label: "Dialog" },
       { to: "/components/sheet", label: "Sheet" },
       { to: "/components/drawer", label: "Drawer" },
+      { to: "/components/toast", label: "Toast" },
     ],
   },
   {

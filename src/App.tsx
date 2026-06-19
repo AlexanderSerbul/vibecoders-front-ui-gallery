@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom"
 
 import { Footer } from "@/components/Footer"
 import { Navbar } from "@/components/Navbar"
+import { Toaster } from "@/components/ui/sonner"
 import { Home } from "@/pages/Home"
 import { DialogDemo } from "@/pages/demos/DialogDemo"
 import { SheetDemo } from "@/pages/demos/SheetDemo"
@@ -33,6 +34,7 @@ import { DataTableDemo } from "@/pages/demos/DataTableDemo"
 import { ChartDemo } from "@/pages/demos/ChartDemo"
 import { CarouselDemo } from "@/pages/demos/CarouselDemo"
 import { AvatarDemo } from "@/pages/demos/AvatarDemo"
+import { ToastDemo } from "@/pages/demos/ToastDemo"
 
 function App() {
   return (
@@ -71,9 +73,11 @@ function App() {
           <Route path="/components/chart" element={<ChartDemo />} />
           <Route path="/components/carousel" element={<CarouselDemo />} />
           <Route path="/components/avatar" element={<AvatarDemo />} />
+          <Route path="/components/toast" element={<ToastDemo />} />
         </Routes>
       </main>
       <Footer />
+      <Toaster richColors />
     </div>
   )
 }
