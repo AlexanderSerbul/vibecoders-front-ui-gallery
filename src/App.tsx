@@ -32,6 +32,7 @@ import { ScrollAreaDemo } from "@/pages/demos/ScrollAreaDemo"
 import { DataTableDemo } from "@/pages/demos/DataTableDemo"
 import { ChartDemo } from "@/pages/demos/ChartDemo"
 import { CarouselDemo } from "@/pages/demos/CarouselDemo"
+import { AvatarDemo } from "@/pages/demos/AvatarDemo"
 
 function App() {
   return (
@@ -69,6 +70,7 @@ function App() {
           <Route path="/components/data-table" element={<DataTableDemo />} />
           <Route path="/components/chart" element={<ChartDemo />} />
           <Route path="/components/carousel" element={<CarouselDemo />} />
+          <Route path="/components/avatar" element={<AvatarDemo />} />
         </Routes>
       </main>
       <Footer />

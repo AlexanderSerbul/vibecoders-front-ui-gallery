@@ -97,4 +97,9 @@ export const componentGroups: ComponentGroup[] = [
       { to: "/components/date-picker", label: "Date Picker" },
     ],
   },
+  {
+    label: "Элементы",
+    description: "Небольшие UI-примитивы: аватары, индикаторы, заглушки.",
+    items: [{ to: "/components/avatar", label: "Avatar" }],
+  },
 ]
