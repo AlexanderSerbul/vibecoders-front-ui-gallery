@@ -30,33 +30,32 @@ export function DialogDemo() {
         </Badge>
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Dialog</h1>
         <p className="mt-2 text-muted-foreground">
-          Модальное окно поверх страницы. Поведение и доступность берёт на себя
-          Radix, а внешний вид — Tailwind через токены.
+          Окно, которое появляется поверх страницы, затемняет её и блокирует —
+          пока не закроешь, со страницей не повзаимодействуешь.
         </p>
       </header>
 
       <Card className="mb-8">
         <CardHeader>
-          <CardTitle>Что Radix делает под капотом</CardTitle>
+          <CardTitle>Что важно</CardTitle>
           <CardDescription>
-            Самое сложное в модалке — не вид, а корректное поведение.
+            Самое сложное в таком окне — не вид, а правильное поведение.
           </CardDescription>
         </CardHeader>
         <CardContent>
           <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
-            <li>Ловушка фокуса: Tab не выходит за пределы окна.</li>
-            <li>Возврат фокуса на кнопку-триггер при закрытии.</li>
-            <li>Закрытие по Esc и по клику на затемнение.</li>
-            <li>Блокировка прокрутки страницы под окном.</li>
-            <li>ARIA-роли и связка заголовка/описания для скринридеров.</li>
-            <li>Рендер через портал — поверх всего, вне дерева страницы.</li>
+            <li>Полностью работает с клавиатуры: Tab не уходит за пределы окна.</li>
+            <li>Когда закрываешь, фокус возвращается на кнопку, которая его открыла.</li>
+            <li>Закрывается по Esc и по клику на затемнённый фон.</li>
+            <li>Страница под окном не прокручивается.</li>
+            <li>Корректно читается скринридерами.</li>
           </ul>
         </CardContent>
       </Card>
 
       <div className="flex flex-col items-start gap-4">
         <p className="text-sm text-muted-foreground">
-          Нажми кнопку — откроется диалог. Попробуй Tab, Esc и клик по фону.
+          Нажми кнопку — откроется окно. Попробуй Tab, Esc и клик по фону.
         </p>
         <Dialog>
           <DialogTrigger asChild>

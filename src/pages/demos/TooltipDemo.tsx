@@ -40,9 +40,9 @@ export function TooltipDemo() {
         </h1>
         <p className="mt-2 text-muted-foreground">
           Короткая подсказка, всплывающая при наведении или фокусе. Её главная
-          работа — подписывать иконочные кнопки. Прямая противоположность
-          Popover: <strong>по наведению</strong> и{" "}
-          <strong>без интерактивного содержимого</strong>.
+          работа — подписывать кнопки-иконки. Полная противоположность{" "}
+          <code>Popover</code>: <strong>по наведению</strong> и{" "}
+          <strong>только текст, без живых элементов внутри</strong>.
         </p>
       </header>
 
@@ -56,23 +56,20 @@ export function TooltipDemo() {
         <CardContent>
           <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
             <li>
-              <strong>Триггер — наведение и фокус, не клик.</strong> Появляется
-              после небольшой задержки (<code>delayDuration</code>) и скрывается,
-              как только курсор ушёл.
+              <strong>Срабатывает на наведение и фокус, а не на клик.</strong>{" "}
+              Появляется после короткой задержки и исчезает, как только курсор ушёл.
             </li>
             <li>
-              <strong>Содержимое неинтерактивно:</strong> только текст. Кнопки и
-              поля сюда класть нельзя — для этого Popover.
+              <strong>Внутри только текст:</strong> кнопки и поля сюда класть нельзя —
+              для этого <code>Popover</code>.
             </li>
             <li>
-              <strong>Доступность:</strong> Radix связывает подсказку с триггером
-              через <code>aria-describedby</code>. Но для скринридера это{" "}
-              <em>дополнение</em>, а не замена <code>aria-label</code> —
-              иконочной кнопке нужно и то, и другое.
+              <strong>Подсказку читают скринридеры,</strong> но она лишь дополняет
+              подпись кнопки, а не заменяет её — у кнопки-иконки должно быть и то,
+              и другое.
             </li>
             <li>
-              Позиционируется со стрелкой к триггеру; пропсы те же, что у Popover
-              — <code>side</code>, <code>align</code>, <code>sideOffset</code>.
+              Появляется со стрелкой к кнопке и сам выбирает удобную сторону.
             </li>
           </ul>
         </CardContent>
@@ -104,8 +101,7 @@ export function TooltipDemo() {
         <section className="space-y-3">
           <h2 className="text-sm font-medium">Четыре стороны</h2>
           <p className="text-sm text-muted-foreground">
-            Подсказку можно прижать к любой стороне триггера пропом{" "}
-            <code>side</code>.
+            Подсказку можно прижать к любой стороне кнопки.
           </p>
           <div className="flex flex-wrap gap-2">
             {sides.map(({ side, label }) => (

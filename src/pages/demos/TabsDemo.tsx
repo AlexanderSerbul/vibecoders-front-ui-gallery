@@ -38,20 +38,14 @@ export function TabsDemo() {
         <CardContent>
           <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
             <li>
-              <strong>Tabs — горизонтальное переключение,</strong> видна ровно
+              <strong>Tabs — переключение в одном месте,</strong> видна ровно
               одна панель: для разных <em>разделов</em> одного экрана (Обзор /
-              Настройки). Accordion — вертикальные секции, можно раскрыть
-              несколько мыслей подряд (FAQ).
+              Настройки). Accordion — секции одна под другой, и можно раскрыть
+              сразу несколько (список вопросов и ответов).
             </li>
             <li>
-              <strong>Состояние:</strong> <code>defaultValue</code>{" "}
-              (неконтролируемо) или <code>value</code> /{" "}
-              <code>onValueChange</code>.
-            </li>
-            <li>
-              <strong>Доступность:</strong> роли <code>tablist</code> /{" "}
-              <code>tab</code> / <code>tabpanel</code>; между вкладками — стрелки,
-              в фокус-потоке только активная панель.
+              <strong>Удобно с клавиатуры:</strong> между вкладками можно
+              переключаться стрелками.
             </li>
           </ul>
         </CardContent>

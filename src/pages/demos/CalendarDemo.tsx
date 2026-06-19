@@ -49,8 +49,8 @@ export function CalendarDemo() {
           Calendar
         </h1>
         <p className="mt-2 text-muted-foreground">
-          Календарь для выбора даты. Под капотом — библиотека{" "}
-          <code>react-day-picker</code> (не Radix), стилизованная под shadcn.
+          Календарь для выбора даты. Под капотом — react-day-picker,
+          оформленный в стиле shadcn.
         </p>
       </header>
 
@@ -64,23 +64,20 @@ export function CalendarDemo() {
         <CardContent>
           <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
             <li>
-              <strong>Три режима:</strong> <code>single</code> (одна дата),{" "}
-              <code>multiple</code> (несколько) и <code>range</code> (диапазон)
-              — задаются пропом <code>mode</code>. Переключатель ниже меняет его.
+              <strong>Три режима:</strong> одна дата, несколько дат или диапазон
+              «с — по». Переключатель ниже меняет режим.
             </li>
             <li>
-              <strong>Тип значения зависит от режима:</strong> <code>Date</code>,{" "}
-              <code>Date[]</code> или <code>DateRange</code> — у каждого свой{" "}
-              <code>selected</code> / <code>onSelect</code>.
+              <strong>Выбранное запоминается:</strong> что выбрал — то и
+              подсвечено на календаре.
             </li>
             <li>
-              <strong>Клавиатура и a11y:</strong> стрелки по дням,
-              PageUp/PageDown по месяцам, корректные роли и подписи.
+              <strong>Удобно с клавиатуры:</strong> по дням ходишь стрелками, по
+              месяцам — отдельными клавишами; читается скринридерами.
             </li>
             <li>
-              Полноценный <strong>date picker</strong> собирается из{" "}
-              <strong>Popover + Calendar</strong> — как Combobox из Popover +
-              Command.
+              Поле с выпадающим календарём (<strong>Date Picker</strong>)
+              собирается из <strong>Popover + Calendar</strong>.
             </li>
           </ul>
         </CardContent>

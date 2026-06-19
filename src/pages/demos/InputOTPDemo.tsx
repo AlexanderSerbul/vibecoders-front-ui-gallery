@@ -29,9 +29,8 @@ export function InputOTPDemo() {
           Input OTP
         </h1>
         <p className="mt-2 text-muted-foreground">
-          Поле для одноразовых кодов (SMS, 2FA) — те самые ячейки. Под капотом
-          один скрытый <code>&lt;input&gt;</code>, а клетки лишь рисуют его
-          содержимое. Библиотека <code>input-otp</code>, не Radix.
+          Поле для одноразовых кодов (SMS, 2FA) — те самые отдельные ячейки. На
+          основе библиотеки input-otp.
         </p>
       </header>
 
@@ -45,23 +44,19 @@ export function InputOTPDemo() {
         <CardContent>
           <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
             <li>
-              <strong>Один input под ячейками:</strong> можно{" "}
-              <strong>вставить код целиком</strong> — он сам разложится по
+              <strong>Можно вставить код целиком:</strong> он сам разложится по
               клеткам. Стрелки и Backspace работают как ожидаешь.
             </li>
             <li>
-              <strong>Контролируемый:</strong> <code>value</code> /{" "}
-              <code>onChange</code>; <code>maxLength</code> задаёт число ячеек;{" "}
-              <code>onComplete</code> — колбэк при заполнении.
+              <strong>Сообщает о заполнении:</strong> как только все клетки
+              заполнены, код считается введённым — можно сразу его проверить.
             </li>
             <li>
-              <strong>Удобство ввода:</strong> числовая клавиатура на мобильном и
-              автоподстановка кода из SMS (
-              <code>autocomplete="one-time-code"</code>).
+              <strong>Удобство ввода:</strong> на телефоне открывается числовая
+              клавиатура, а код из SMS подставляется автоматически.
             </li>
             <li>
-              Группы и разделитель (<code>InputOTPSeparator</code>) — чисто для
-              вида (123-456).
+              Деление на группы и разделитель — чисто для вида (123-456).
             </li>
           </ul>
         </CardContent>

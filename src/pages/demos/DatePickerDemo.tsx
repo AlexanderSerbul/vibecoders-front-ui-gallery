@@ -32,9 +32,8 @@ export function DatePickerDemo() {
           Date Picker
         </h1>
         <p className="mt-2 text-muted-foreground">
-          Поле с датой: по клику открывается календарь. Как и Combobox, это{" "}
-          <strong>не отдельный компонент shadcn</strong>, а{" "}
-          <strong>композиция</strong> — <code>Popover</code> +{" "}
+          Поле с датой: по клику открывается календарь. Это не отдельный
+          компонент, а связка двух готовых — <code>Popover</code> +{" "}
           <code>Calendar</code>.
         </p>
       </header>
@@ -43,28 +42,27 @@ export function DatePickerDemo() {
         <CardHeader>
           <CardTitle>Как собран — и про выбор года</CardTitle>
           <CardDescription>
-            Два готовых кирпичика плюс ответ на «как прыгнуть на нужный год».
+            Два готовых кирпичика плюс ответ на «как быстро перейти к нужному
+            году».
           </CardDescription>
         </CardHeader>
         <CardContent>
           <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
             <li>
-              <strong>Кнопка-триггер</strong> в <code>Popover</code> показывает
-              выбранную дату (или плейсхолдер), внутри — <code>Calendar</code>.
-              Выбрал день — Popover закрывается.
+              <strong>Кнопка показывает дату:</strong> на ней видно выбранную
+              дату (или подсказку «Выберите дату»), а по клику открывается{" "}
+              <code>Calendar</code>. Выбрал день — окошко закрывается.
             </li>
             <li>
-              <strong>Год не нужно «листать»:</strong> проп{" "}
-              <code>captionLayout="dropdown"</code> превращает подпись «Июнь
-              2026» в <strong>выпадающие списки месяца и года</strong> — прыжок
-              на любой год в один клик.
+              <strong>Год не нужно «листать»:</strong> месяц и год здесь —
+              выпадающими списками, так что к нужному году переходишь в один
+              клик.
             </li>
             <li>
-              Диапазон годов задаётся пропами <code>startMonth</code> /{" "}
-              <code>endMonth</code> (здесь — 1950–2035).
+              Доступные годы можно ограничить (здесь — с 1950 по 2035).
             </li>
             <li>
-              Никакой новой зависимости: <code>Popover</code> и{" "}
+              Новых библиотек не нужно: <code>Popover</code> и{" "}
               <code>Calendar</code> у нас уже есть.
             </li>
           </ul>

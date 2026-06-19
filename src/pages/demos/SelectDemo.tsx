@@ -62,8 +62,8 @@ export function SelectDemo() {
         </h1>
         <p className="mt-2 text-muted-foreground">
           Выпадающий список для выбора <strong>одного</strong> значения —
-          стилизуемая замена нативного <code>&lt;select&gt;</code>: с порталом,
-          клавиатурой и группами.
+          красивая замена обычного <code>&lt;select&gt;</code>: с навигацией с
+          клавиатуры и группами пунктов.
         </p>
       </header>
 
@@ -77,21 +77,21 @@ export function SelectDemo() {
         <CardContent>
           <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
             <li>
-              <strong>Это форм-контрол:</strong> хранит выбранное значение (
-              <code>value</code> / <code>onValueChange</code>), показывает его в
-              триггере и ставит галочку у выбранного пункта.
+              <strong>Это поле формы:</strong> запоминает выбранное значение,
+              показывает его на кнопке и ставит галочку у выбранного пункта.
             </li>
             <li>
-              <strong>Не меню действий.</strong> DropdownMenu запускает команды и
-              ничего не «помнит»; Select — про выбор значения, как радиокнопки.
+              <strong>Не меню действий.</strong> <code>DropdownMenu</code>{" "}
+              запускает команды и ничего не «помнит»; <code>Select</code> — про
+              выбор значения, как радиокнопки.
             </li>
             <li>
-              <strong>Без поиска.</strong> Для длинных списков с фильтром берут
-              Combobox (Popover + Command); здесь — короткий список с группами.
+              <strong>Без поиска.</strong> Для длинных списков с фильтром берут{" "}
+              <code>Combobox</code>; здесь — короткий список с группами.
             </li>
             <li>
-              Доступность Radix: роли <code>combobox</code> / <code>listbox</code>,
-              стрелки, выбор по Enter, ввод первых букв (type-ahead).
+              Навигация и выбор с клавиатуры: стрелки, Enter, переход к пункту по
+              первым буквам.
             </li>
           </ul>
         </CardContent>

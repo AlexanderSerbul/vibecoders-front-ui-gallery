@@ -43,9 +43,9 @@ export function AccordionDemo() {
           Accordion
         </h1>
         <p className="mt-2 text-muted-foreground">
-          Раскрывающиеся секции — как FAQ. Клик по заголовку разворачивает и
-          сворачивает содержимое. Контентный компонент: в потоке страницы, без
-          оверлеев и порталов.
+          Раскрывающиеся секции — как список вопросов и ответов. Клик по
+          заголовку разворачивает и сворачивает содержимое. Живёт прямо на
+          странице, без всплывающих окон.
         </p>
       </header>
 
@@ -53,27 +53,22 @@ export function AccordionDemo() {
         <CardHeader>
           <CardTitle>Что важно</CardTitle>
           <CardDescription>
-            Поведение раскрытия и плавная анимация высоты.
+            Как секции раскрываются и плавно меняют высоту.
           </CardDescription>
         </CardHeader>
         <CardContent>
           <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
             <li>
-              <strong>Режимы:</strong> <code>type="single"</code> (открыта одна
-              секция) или <code>type="multiple"</code> (несколько).{" "}
-              <code>collapsible</code> позволяет закрыть открытую.
+              <strong>Два режима:</strong> можно держать открытой только одну
+              секцию или разрешить открывать сразу несколько.
             </li>
             <li>
-              <strong>Анимация высоты:</strong> Radix замеряет контент и кладёт
-              высоту в переменную{" "}
-              <code>--radix-accordion-content-height</code>, а мы анимируем{" "}
-              <code>height</code> от 0 до неё (keyframes в{" "}
-              <code>index.css</code>).
+              <strong>Плавная анимация:</strong> при раскрытии секция мягко
+              «вырастает» по высоте, а не появляется рывком.
             </li>
             <li>
-              <strong>Доступность:</strong> заголовок — это <code>button</code>{" "}
-              внутри <code>h3</code>, с <code>aria-expanded</code>; работает
-              клавиатура.
+              <strong>Удобно с клавиатуры:</strong> по заголовкам можно ходить и
+              открывать их без мыши.
             </li>
           </ul>
         </CardContent>

@@ -408,41 +408,35 @@ export function DataTableDemo() {
           Data Table
         </h1>
         <p className="mt-2 text-muted-foreground">
-          Таблица данных с сортировкой, фильтром, пагинацией и выбором строк.
-          shadcn рисует разметку (<code>Table</code>), а всю логику даёт
-          headless-движок <code>@tanstack/react-table</code>.
+          Таблица данных: сортировка, фильтр, постранично и выбор строк. Внешний
+          вид — это <code>Table</code> от shadcn, а всю логику даёт TanStack
+          Table.
         </p>
       </header>
 
       <Card className="mb-8">
         <CardHeader>
           <CardTitle>Что важно</CardTitle>
-          <CardDescription>Разметка отдельно, логика отдельно.</CardDescription>
+          <CardDescription>Внешний вид отдельно, логика отдельно.</CardDescription>
         </CardHeader>
         <CardContent>
           <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
             <li>
-              <strong>Table + TanStack Table:</strong> shadcn даёт только стилевые
-              примитивы <code>Table</code>; сортировку, фильтр, пагинацию и выбор
-              строк добавляет headless-библиотека{" "}
-              <code>@tanstack/react-table</code>.
+              <strong>Готовое поведение:</strong> сортировка по столбцу, фильтр,
+              разбивка на страницы и выбор строк — всё работает из коробки.
             </li>
             <li>
-              <strong>Headless</strong> = без разметки: библиотека держит состояние
-              и модели (<code>useReactTable</code>, <code>get*RowModel</code>), а
-              ячейки ты рендеришь сам через <code>flexRender</code>.
+              Библиотека берёт на себя логику, а как выглядят ячейки — решаешь ты.
             </li>
             <li>
-              <strong>Колонки декларативны:</strong> <code>ColumnDef</code> с{" "}
-              <code>accessorKey</code> и кастомными <code>header</code>/
-              <code>cell</code> (тут — чекбокс, бейдж статуса, кнопка-сортировка,
-              формат суммы).
+              <strong>Каждый столбец настраиваешь сам:</strong> здесь это галочка
+              выбора, цветной значок статуса, столбец с сортировкой и сумма в
+              рублях.
             </li>
             <li>
-              <strong>Состояние — у тебя:</strong> sorting / filters / selection /
-              pagination живут в <code>useState</code> и передаются таблице. В бою
-              выносят переиспользуемый <code>&lt;DataTable columns data /&gt;</code>{" "}
-              + <code>columns.ts</code>; здесь всё в одном файле для наглядности.
+              <strong>Живая таблица:</strong> данные можно открыть в боковой
+              панели, изменить через форму или удалить строку — таблица сразу
+              обновляется.
             </li>
           </ul>
         </CardContent>

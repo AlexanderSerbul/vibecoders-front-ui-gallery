@@ -33,39 +33,34 @@ export function CarouselDemo() {
           Carousel
         </h1>
         <p className="mt-2 text-muted-foreground">
-          Слайдер с прокруткой свайпом, стрелками и кнопками. Не Radix: под
-          капотом — библиотека <code>embla-carousel-react</code>, обёрнутая под
-          shadcn.
+          Слайдер-карусель: листаешь свайпом, стрелками на клавиатуре или
+          кнопками по краям. Под капотом — embla.
         </p>
       </header>
 
       <Card className="mb-8">
         <CardHeader>
           <CardTitle>Что важно</CardTitle>
-          <CardDescription>Из чего собран и чем управляется.</CardDescription>
+          <CardDescription>Как листать и что умеет.</CardDescription>
         </CardHeader>
         <CardContent>
           <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
             <li>
-              <strong>Embla под капотом:</strong> shadcn даёт{" "}
-              <code>Carousel</code> / <code>CarouselContent</code> /{" "}
-              <code>CarouselItem</code> и кнопки, а саму прокрутку (свайп,
-              инерция, измерения) делает <code>embla-carousel-react</code>.
+              <strong>Плавная прокрутка:</strong> свайп с инерцией, как на
+              телефоне — этим занимается embla.
             </li>
             <li>
-              <strong>Сколько слайдов в кадре</strong> — это класс{" "}
-              <code>basis</code> у <code>CarouselItem</code>:{" "}
-              <code>basis-full</code> (один) / <code>basis-1/3</code> (три) и т.п.
+              <strong>Сколько слайдов видно сразу</strong> — настраивается: один
+              на весь экран, три рядом и так далее.
             </li>
             <li>
-              <strong>Управление:</strong> свайп, стрелки клавиатуры,
-              кнопки-стрелки; <code>orientation</code> —{" "}
-              <code>horizontal</code> или <code>vertical</code>.
+              <strong>Листать можно по-разному:</strong> свайпом, стрелками на
+              клавиатуре или кнопками по краям; карусель бывает горизонтальной и
+              вертикальной.
             </li>
             <li>
-              <strong>Опции и плагины embla:</strong> проп <code>opts</code> (
-              <code>loop</code>, <code>align</code>…) и <code>plugins</code>{" "}
-              (например, автоплей).
+              <strong>Есть допнастройки:</strong> зацикливание (после последнего
+              слайда снова первый) и автопрокрутка.
             </li>
           </ul>
         </CardContent>

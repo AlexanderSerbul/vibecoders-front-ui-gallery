@@ -91,9 +91,8 @@ export function SortableTabsDemo() {
           Sortable Tabs
         </h1>
         <p className="mt-2 text-muted-foreground">
-          Вкладки, которые можно <strong>перетаскивать местами</strong>.
-          Композиция: Radix <code>Tabs</code> (поведение и доступность) +{" "}
-          <code>dnd-kit</code> (перетаскивание).
+          Вкладки, которые можно <strong>перетаскивать местами</strong>. Это
+          обычные <code>Tabs</code>, а перетаскивание добавляет dnd-kit.
         </p>
       </header>
 
@@ -101,29 +100,27 @@ export function SortableTabsDemo() {
         <CardHeader>
           <CardTitle>Как это склеено</CardTitle>
           <CardDescription>
-            Порядок — массив в state; Tabs рисует из него, dnd-kit его
-            переставляет.
+            Tabs показывают вкладки по порядку, а перетаскивание этот порядок
+            меняет.
           </CardDescription>
         </CardHeader>
         <CardContent>
           <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
             <li>
-              <strong>Источник порядка — массив</strong> вкладок в{" "}
-              <code>useState</code>; <code>Tabs</code> рендерит триггеры из него.
+              <strong>Порядок задаёт список:</strong> вкладки рисуются в том
+              порядке, в каком лежат в списке.
             </li>
             <li>
-              <strong>dnd-kit</strong> на <code>onDragEnd</code> переставляет
-              массив (<code>arrayMove</code>) — Tabs перерисовывается в новом
-              порядке.
+              <strong>Перетаскивание меняет порядок:</strong> отпускаешь вкладку
+              на новом месте — список переставляется, и вкладки перерисовываются.
             </li>
             <li>
-              <strong>Активная вкладка — по value</strong> (строке, не индексу),
-              поэтому при перестановке выбор не сбивается.
+              <strong>Выбор не сбивается:</strong> после перестановки активной
+              остаётся та же вкладка, что и была.
             </li>
             <li>
-              <strong>Клик против драга:</strong> порог{" "}
-              <code>activationConstraint: 8px</code> — клик без сдвига выбирает
-              вкладку, сдвиг начинает перетаскивание.
+              <strong>Клик и перетаскивание не мешают друг другу:</strong>
+              короткий клик выбирает вкладку, а заметный сдвиг начинает её тащить.
             </li>
           </ul>
         </CardContent>

@@ -43,23 +43,16 @@ export function ToggleDemo() {
           <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
             <li>
               <strong>Это кнопка с состоянием:</strong> остаётся «вдавленной»,
-              пока активна. Семантически — <code>button</code> с{" "}
-              <code>aria-pressed</code>, а не <code>switch</code> /{" "}
-              <code>checkbox</code>.
+              пока режим включён, и отжимается при повторном нажатии.
             </li>
             <li>
               <strong>Где применять:</strong> тулбары и режимы (жирный,
-              сетка/список, mute). Switch — для настроек, Checkbox — для выбора в
-              форме.
+              сетка/список, без звука). Switch — для настроек, Checkbox — для
+              выбора в форме.
             </li>
             <li>
-              <strong>Контролируемый:</strong> <code>pressed</code> /{" "}
-              <code>onPressedChange</code> — булево.
-            </li>
-            <li>
-              Варианты и размеры (<code>variant</code>, <code>size</code>) —
-              через <code>cva</code>, как у <code>Button</code>. Для набора
-              кнопок есть отдельный <code>ToggleGroup</code>.
+              <strong>Доступно всем:</strong> работает мышью и с клавиатуры,
+              понятно скринридерам.
             </li>
           </ul>
         </CardContent>

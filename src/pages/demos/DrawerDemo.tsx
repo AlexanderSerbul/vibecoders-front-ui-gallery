@@ -28,31 +28,29 @@ export function DrawerDemo() {
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Drawer</h1>
         <p className="mt-2 text-muted-foreground">
           Шторка, выезжающая с края, которую можно смахнуть пальцем или мышью,
-          чтобы закрыть. Мобильно-нативное ощущение.
+          чтобы закрыть. Ощущается как родная мобильная панель; под капотом — Vaul.
         </p>
       </header>
 
       <Card className="mb-8">
         <CardHeader>
-          <CardTitle>Здесь headless-слой — не Radix напрямую, а Vaul</CardTitle>
+          <CardTitle>Что важно</CardTitle>
           <CardDescription>
-            Наглядный пример принципа «лучшая библиотека под задачу».
+            Когда нужна именно мобильная шторка, которую тянут пальцем.
           </CardDescription>
         </CardHeader>
         <CardContent>
           <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
             <li>
-              Vaul добавляет перетаскивание для закрытия (drag-to-dismiss) и
-              «ручку»-полоску сверху у нижней шторки.
+              Шторку можно потянуть и смахнуть, чтобы закрыть; у нижней сверху —
+              «ручка»-полоска для захвата.
             </li>
             <li>
-              Под капотом Vaul сам построен на Radix Dialog — поэтому доступность
-              (фокус, Esc, ARIA, портал) на месте.
+              Закрывается по Esc и работает с клавиатуры — как обычное окно.
             </li>
-            <li>Проп direction: bottom (по умолчанию) · top · left · right.</li>
+            <li>Выезжает с любого края: снизу (по умолчанию), сверху, слева или справа.</li>
             <li>
-              Частые юзкейсы: нижние шторки на мобильном, action sheets,
-              мобильное меню.
+              Чаще всего нужна на мобильном: фильтры, выбор варианта, меню.
             </li>
           </ul>
         </CardContent>
@@ -99,11 +97,11 @@ export function DrawerDemo() {
               <DrawerHeader>
                 <DrawerTitle>Боковая шторка</DrawerTitle>
                 <DrawerDescription>
-                  Та же Vaul-шторка, но с направлением right.
+                  Та же шторка, но выезжает справа.
                 </DrawerDescription>
               </DrawerHeader>
               <div className="px-4 text-sm text-muted-foreground">
-                <p>direction=&quot;right&quot; — выезжает справа.</p>
+                <p>Эта шторка появляется у правого края экрана.</p>
               </div>
               <DrawerFooter>
                 <DrawerClose asChild>

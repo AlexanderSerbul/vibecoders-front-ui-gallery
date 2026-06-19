@@ -29,7 +29,7 @@ export function AvatarDemo() {
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Avatar</h1>
         <p className="mt-2 text-muted-foreground">
           Аватар пользователя: фото с запасным вариантом. Если картинка не
-          загрузилась (или её нет) — показываются инициалы. На Radix.
+          загрузилась (или её нет) — показываются инициалы.
         </p>
       </header>
 
@@ -41,18 +41,16 @@ export function AvatarDemo() {
         <CardContent>
           <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
             <li>
-              <strong>Два слоя:</strong> <code>AvatarImage</code> (фото) и{" "}
-              <code>AvatarFallback</code> (что показать, пока фото грузится или
-              если оно не загрузилось) — обычно инициалы или иконка.
+              <strong>Фото плюс запасной вариант:</strong> если картинки нет —
+              показываются инициалы или иконка.
             </li>
             <li>
-              <strong>Radix сам следит за загрузкой:</strong> держит фолбэк, пока
-              картинка не готова, и прячет его, когда фото загрузилось — без
-              мигания (есть проп <code>delayMs</code>).
+              <strong>Переключение незаметное:</strong> запасной вариант держится,
+              пока грузится фото, и сменяется на картинку без мигания.
             </li>
             <li>
-              <strong>Размер</strong> — через <code>className</code> (
-              <code>size-8</code> по умолчанию; <code>size-12</code> и т.д.).
+              <strong>Размер любой:</strong> от маленькой иконки до крупного
+              аватара.
             </li>
           </ul>
         </CardContent>
@@ -74,7 +72,7 @@ export function AvatarDemo() {
         <section className="space-y-3">
           <h2 className="text-sm font-medium">Без фото — фолбэк</h2>
           <p className="text-sm text-muted-foreground">
-            Нет <code>src</code> — сразу видны инициалы:
+            Фото не задано — сразу видны инициалы:
           </p>
           <Avatar className="size-12">
             <AvatarFallback>БФ</AvatarFallback>

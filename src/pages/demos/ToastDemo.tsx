@@ -20,36 +20,33 @@ export function ToastDemo() {
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Toast</h1>
         <p className="mt-2 text-muted-foreground">
           Всплывающие уведомления в углу экрана. Важно:{" "}
-          <strong>старый Toast в shadcn устарел</strong> — официальная замена это{" "}
-          <strong>Sonner</strong> (библиотека <code>sonner</code>).
+          <strong>старый Toast в shadcn устарел</strong> — официальная замена
+          это <strong>Sonner</strong>.
         </p>
       </header>
 
       <Card className="mb-8">
         <CardHeader>
           <CardTitle>Что важно</CardTitle>
-          <CardDescription>Императивный API + один Toaster.</CardDescription>
+          <CardDescription>Вызываешь одной строкой из любого места.</CardDescription>
         </CardHeader>
         <CardContent>
           <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
             <li>
-              <strong>Один <code>&lt;Toaster /&gt;</code> в корне</strong>{" "}
-              приложения (у нас — в <code>App.tsx</code>), а вызываешь{" "}
-              <code>toast(...)</code> откуда угодно — JSX на каждый тост не нужен.
+              <strong>Подключается один раз:</strong> дальше уведомление можно
+              вызвать из любого места — верстать его каждый раз не нужно.
             </li>
             <li>
-              <strong>Варианты:</strong> <code>toast()</code>,{" "}
-              <code>toast.success/error</code>, <code>toast.promise()</code>; с{" "}
-              <code>description</code> и кнопкой <code>action</code>.
+              <strong>Разные виды:</strong> обычное, «успех», «ошибка» или
+              ожидание загрузки; можно добавить пояснение и кнопку (например,
+              «Отменить»).
             </li>
             <li>
-              <strong>Из коробки:</strong> стопка, авто-скрытие, свайп для
-              закрытия, доступность.
+              <strong>Всё из коробки:</strong> несколько уведомлений встают
+              стопкой, сами исчезают и закрываются свайпом.
             </li>
             <li>
-              <strong>Тема:</strong> мы адаптировали <code>sonner.tsx</code> под
-              классовый dark mode через CSS-переменные (без{" "}
-              <code>next-themes</code>).
+              <strong>Темы:</strong> светлая и тёмная подхватываются автоматически.
             </li>
           </ul>
         </CardContent>

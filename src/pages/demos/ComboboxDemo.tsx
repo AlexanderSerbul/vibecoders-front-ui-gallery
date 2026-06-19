@@ -54,10 +54,10 @@ export function ComboboxDemo() {
           Combobox
         </h1>
         <p className="mt-2 text-muted-foreground">
-          Поле выбора с поиском: как Select, но с фильтром по вводу. Ключевая
-          деталь — <strong>в shadcn нет компонента Combobox</strong>. Это{" "}
-          <strong>композиция</strong>: кнопка-триггер в Popover, а внутри —
-          Command со строкой поиска.
+          Поле выбора с поиском: как Select, но список фильтруется по мере ввода.
+          Важная деталь — <strong>отдельного компонента Combobox нет</strong>. Он
+          собран из двух уже знакомых: <code>Popover</code> (всплывающая панель) и
+          внутри — <code>Command</code> (список с поиском).
         </p>
       </header>
 
@@ -71,22 +71,20 @@ export function ComboboxDemo() {
         <CardContent>
           <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
             <li>
-              <strong>Popover</strong> даёт плавающую панель у кнопки и
-              управление открытием (<code>open</code> /{" "}
-              <code>onOpenChange</code>).
+              <strong><code>Popover</code></strong> даёт всплывающую панель у
+              кнопки, которая открывается и закрывается.
             </li>
             <li>
-              <strong>Command</strong> (cmdk) внутри даёт строку поиска,
-              фильтрацию и навигацию по клавиатуре.
+              <strong><code>Command</code></strong> внутри даёт строку поиска,
+              фильтрацию и навигацию с клавиатуры.
             </li>
             <li>
-              <strong>Состояние — наше:</strong> выбранное значение и флаг
-              открытия живут в <code>useState</code> демо-страницы; по выбору
-              пункта закрываем Popover.
+              Выбрал пункт — панель сама закрывается, а выбранное значение
+              остаётся на кнопке.
             </li>
             <li>
-              Когда брать Combobox вместо Select: длинный список, где нужен
-              поиск. Короткий фиксированный список — проще оставить на Select.
+              Когда брать Combobox вместо Select: длинный список, где нужен поиск.
+              Короткий фиксированный список — проще оставить на Select.
             </li>
           </ul>
         </CardContent>

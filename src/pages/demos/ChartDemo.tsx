@@ -57,39 +57,34 @@ export function ChartDemo() {
         </Badge>
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Chart</h1>
         <p className="mt-2 text-muted-foreground">
-          Графики поверх <code>recharts</code>. shadcn не рисует свой график — он
-          даёт тонкую обёртку <code>ChartContainer</code> с темизацией через
-          CSS-переменные, плюс аккуратные тултип и легенду.
+          Графики на основе recharts: столбчатая и круговая диаграммы. shadcn
+          добавляет аккуратное оформление, подсказку при наведении и легенду, а
+          цвета сами подстраиваются под светлую и тёмную тему.
         </p>
       </header>
 
       <Card className="mb-8">
         <CardHeader>
           <CardTitle>Что важно</CardTitle>
-          <CardDescription>Recharts рисует, shadcn темизует.</CardDescription>
+          <CardDescription>Рисует график, shadcn оформляет.</CardDescription>
         </CardHeader>
         <CardContent>
           <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
             <li>
-              <strong>Композиция recharts:</strong> сам график (
-              <code>BarChart</code>, <code>Bar</code>, <code>XAxis</code>…) — из
-              recharts; shadcn лишь оборачивает его в <code>ChartContainer</code>.
+              <strong>Два вида диаграмм:</strong> столбчатая (визиты по месяцам) и
+              круговая (доли по источникам).
             </li>
             <li>
-              <strong>Цвета — через токены:</strong> в <code>ChartConfig</code>{" "}
-              пишешь <code>color: "var(--chart-1)"</code>, обёртка превращает это
-              в <code>--color-desktop</code>, и бар красится{" "}
-              <code>fill="var(--color-desktop)"</code> — темы light/dark
-              автоматом.
+              <strong>Цвета задаёшь один раз:</strong> подбираешь палитру, а
+              светлая и тёмная тема подхватываются сами.
             </li>
             <li>
-              <strong>Тултип и легенда</strong> — <code>ChartTooltipContent</code>{" "}
-              и <code>ChartLegendContent</code>: берут подписи из{" "}
-              <code>ChartConfig</code>, оформлены под shadcn.
+              При наведении на график всплывает подсказка с цифрами, а снизу —
+              легенда с подписями.
             </li>
             <li>
-              Внутри — <code>ResponsiveContainer</code>: график сам тянется по
-              ширине родителя.
+              График сам растягивается по ширине — на телефоне и на широком
+              экране выглядит правильно.
             </li>
           </ul>
         </CardContent>

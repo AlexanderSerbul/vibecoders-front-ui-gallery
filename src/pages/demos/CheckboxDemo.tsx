@@ -51,7 +51,7 @@ export function CheckboxDemo() {
         </h1>
         <p className="mt-2 text-muted-foreground">
           Флажок для выбора в форме или списке. В отличие от Switch умеет{" "}
-          <strong>три состояния</strong>, включая «частично» (indeterminate).
+          <strong>три состояния</strong>, включая «частично».
         </p>
       </header>
 
@@ -65,23 +65,16 @@ export function CheckboxDemo() {
         <CardContent>
           <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
             <li>
-              <strong>Отложенный выбор:</strong> отмечаешь в форме/списке и
+              <strong>Отложенный выбор:</strong> отмечаешь в форме или списке и
               подтверждаешь позже кнопкой. Switch же применяет настройку сразу.
             </li>
             <li>
-              <strong>Три состояния:</strong> отмечен / снят /{" "}
-              <strong>indeterminate</strong> («частично») — для «выбрать всё»,
-              когда отмечена только часть. Switch так не умеет.
+              <strong>Три состояния:</strong> отмечен, снят или «частично» — для
+              «выбрать всё», когда отмечена только часть. Switch так не умеет.
             </li>
             <li>
-              <strong>Контролируемый:</strong> <code>checked</code> /{" "}
-              <code>onCheckedChange</code>; значение —{" "}
-              <code>boolean | "indeterminate"</code>.
-            </li>
-            <li>
-              <strong>Доступность:</strong> роль <code>checkbox</code>,{" "}
-              <code>aria-checked</code> (true / false / mixed), связь с{" "}
-              <code>Label</code>.
+              <strong>Доступно всем:</strong> работает мышью и с клавиатуры,
+              понятно скринридерам.
             </li>
           </ul>
         </CardContent>
@@ -118,7 +111,7 @@ export function CheckboxDemo() {
             <strong>
               {checkedCount} из {permissions.length}
             </strong>
-            {someChecked && " — родитель в состоянии «indeterminate»"}
+            {someChecked && " — флажок «Все права» в состоянии «частично»"}
           </p>
         </div>
 

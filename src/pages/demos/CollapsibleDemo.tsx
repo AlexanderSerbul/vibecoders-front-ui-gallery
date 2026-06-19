@@ -35,8 +35,8 @@ export function CollapsibleDemo() {
           Collapsible
         </h1>
         <p className="mt-2 text-muted-foreground">
-          Одна сворачиваемая секция «показать / скрыть». Самый простой
-          disclosure-примитив — по сути одна секция Accordion.
+          Одна сворачиваемая секция «показать / скрыть». Самый простой вариант —
+          по сути одна секция Accordion.
         </p>
       </header>
 
@@ -44,28 +44,22 @@ export function CollapsibleDemo() {
         <CardHeader>
           <CardTitle>Collapsible против Accordion</CardTitle>
           <CardDescription>
-            Один блок против группы скоординированных.
+            Один блок против группы связанных секций.
           </CardDescription>
         </CardHeader>
         <CardContent>
           <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
             <li>
-              <strong>Одна секция:</strong> просто открыть/закрыть один блок.
-              Accordion — это несколько таких с логикой «открыта одна».
+              <strong>Одна секция:</strong> просто открыть или закрыть один
+              блок. Accordion — это несколько таких, где обычно открыта одна.
             </li>
             <li>
-              <strong>Голый примитив:</strong> shadcn-компонент без стилей —
-              оформление полностью на тебе (Accordion идёт уже оформленным).
+              <strong>Без оформления:</strong> приходит «голым», вид настраиваешь
+              сам (Accordion уже идёт оформленным).
             </li>
             <li>
-              <strong>Контролируемый:</strong> <code>open</code> /{" "}
-              <code>onOpenChange</code> — булево.
-            </li>
-            <li>
-              Раскрытие мгновенное (как у голого shadcn-компонента). Плавную
-              анимацию высоты можно добавить тем же приёмом, что у Accordion (
-              <code>--radix-collapsible-content-height</code> + keyframes), но
-              тогда закрытие зависит от <code>animationend</code>.
+              <strong>Открыто или закрыто:</strong> состояние простое — секция
+              либо видна, либо спрятана.
             </li>
           </ul>
         </CardContent>

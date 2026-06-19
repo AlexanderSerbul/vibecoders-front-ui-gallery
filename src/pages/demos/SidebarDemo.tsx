@@ -106,36 +106,33 @@ export function SidebarDemo() {
           </h1>
           <p className="mt-2 text-muted-foreground">
             Это не виджет на странице, а <strong>каркас приложения</strong>:
-            сворачиваемый навигационный рейл слева плюс область контента. Поэтому
-            демо занимает всю страницу — без общего навбара галереи.
+            сворачиваемое боковое меню слева плюс область контента. Поэтому демо
+            занимает всю страницу — без общего меню галереи.
           </p>
 
           <Card className="mt-8">
             <CardHeader>
               <CardTitle>Что важно</CardTitle>
-              <CardDescription>Провайдер, состояние и свёртка.</CardDescription>
+              <CardDescription>Сворачивается, помнит состояние, подстраивается.</CardDescription>
             </CardHeader>
             <CardContent>
               <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
                 <li>
-                  <strong>Самый составной компонент:</strong> ~25 частей (
-                  <code>SidebarProvider</code> / <code>Sidebar</code> /{" "}
-                  <code>SidebarContent</code> / <code>SidebarMenu…</code>) — всё
-                  держится на одном <code>SidebarProvider</code>.
+                  <strong>Самый собранный компонент:</strong> около 25 частей,
+                  которые вместе образуют целое боковое меню.
                 </li>
                 <li>
-                  <strong>Свёртка:</strong> <code>SidebarTrigger</code> (или{" "}
-                  <kbd>⌘/Ctrl&nbsp;+&nbsp;B</kbd>) сворачивает рейл в иконки (
-                  <code>collapsible="icon"</code>); при наведении на иконку
-                  всплывает подсказка с подписью.
+                  <strong>Сворачивается:</strong> кнопкой (или сочетанием
+                  <kbd>⌘/Ctrl&nbsp;+&nbsp;B</kbd>) меню сжимается до одних иконок;
+                  при наведении на иконку всплывает подсказка с названием.
                 </li>
                 <li>
-                  <strong>Состояние помнится</strong> между перезагрузками — в
-                  cookie <code>sidebar_state</code>.
+                  <strong>Запоминает</strong>, свёрнуто меню или нет — после
+                  перезагрузки страницы вид сохраняется.
                 </li>
                 <li>
-                  <strong>Адаптив:</strong> на мобильном рейл превращается в
-                  выезжающий <code>Sheet</code>.
+                  <strong>Подстраивается:</strong> на телефоне меню превращается в
+                  выезжающую сбоку панель (<code>Sheet</code>).
                 </li>
               </ul>
             </CardContent>
@@ -143,8 +140,7 @@ export function SidebarDemo() {
 
           <p className="mt-6 text-sm text-muted-foreground">
             Нажми кнопку-«гамбургер» слева вверху (или <kbd>⌘/Ctrl + B</kbd>) —
-            рейл свернётся в иконки. Пункт «В галерею» внизу рейла вернёт на
-            главную.
+            меню свернётся в иконки. Пункт «В галерею» внизу вернёт на главную.
           </p>
         </div>
       </SidebarInset>

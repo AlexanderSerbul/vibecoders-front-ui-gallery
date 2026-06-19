@@ -57,9 +57,9 @@ export function FormDemo() {
         </Badge>
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Form</h1>
         <p className="mt-2 text-muted-foreground">
-          Тонкая обёртка над <strong>react-hook-form</strong> с валидацией через{" "}
-          <strong>Zod</strong>. Связывает подпись, поле, описание и ошибку через{" "}
-          <code>id</code> / <code>aria-*</code> — доступность из коробки.
+          Удобная форма с проверкой полей (на основе{" "}
+          <strong>react-hook-form + Zod</strong>). Проверяет введённое по
+          заданным правилам и показывает понятную ошибку прямо под полем.
         </p>
       </header>
 
@@ -67,30 +67,25 @@ export function FormDemo() {
         <CardHeader>
           <CardTitle>Как устроено</CardTitle>
           <CardDescription>
-            Не Radix: Form — про состояние формы и валидацию, а не про оверлеи.
+            Form — это про поля формы и их проверку.
           </CardDescription>
         </CardHeader>
         <CardContent>
           <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
             <li>
-              <strong>Источник правды</strong> — react-hook-form: <code>Form</code>{" "}
-              это его провайдер, <code>FormField</code> оборачивает{" "}
-              <code>Controller</code>.
+              <strong>Проверка по правилам:</strong> ты задаёшь правила для
+              каждого поля, а форма сама проверяет введённое.
             </li>
             <li>
-              <strong>Валидация — Zod-схема</strong> через <code>zodResolver</code>.
-              Тексты ошибок берутся прямо из схемы (<code>FormMessage</code> их
-              показывает).
+              <strong>Понятные ошибки:</strong> если что-то не так, под полем
+              появляется подсказка с описанием ошибки.
             </li>
             <li>
-              <strong>Доступность автоматом:</strong> <code>FormItem</code> раздаёт{" "}
-              <code>id</code>, а <code>FormControl</code> вешает на поле{" "}
-              <code>aria-describedby</code> и <code>aria-invalid</code> при
-              ошибке.
+              <strong>Удобно с клавиатуры:</strong> подпись, поле и ошибка
+              связаны между собой, поэтому форму корректно читают скринридеры.
             </li>
             <li>
-              Поля — обычные <code>Input</code>/<code>Label</code>; Form лишь
-              склеивает их с состоянием и валидацией.
+              Поля — это обычные поля ввода; Form лишь связывает их с проверкой.
             </li>
           </ul>
         </CardContent>

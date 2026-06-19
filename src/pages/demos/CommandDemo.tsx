@@ -94,9 +94,9 @@ export function CommandDemo() {
           Command
         </h1>
         <p className="mt-2 text-muted-foreground">
-          Командное меню с поиском и навигацией по клавиатуре — то самое «⌘K»,
-          как в VS Code, Linear или GitHub. Построено не на Radix, а на
-          библиотеке <code>cmdk</code>.
+          Командное меню с поиском и навигацией с клавиатуры — то самое «⌘K»,
+          как в VS Code, Linear или GitHub. Под капотом — библиотека{" "}
+          <code>cmdk</code>.
         </p>
       </header>
 
@@ -110,23 +110,21 @@ export function CommandDemo() {
         <CardContent>
           <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
             <li>
-              <strong>Живой фильтр:</strong> cmdk сам прячет пункты, не
-              подходящие под ввод, и скрывает пустые группы.
+              <strong>Живой фильтр:</strong> по мере ввода список сам прячет
+              лишние пункты и скрывает пустые группы.
             </li>
             <li>
-              <strong>Клавиатура:</strong> ↑/↓ — перемещение, Enter — выбрать (
-              <code>onSelect</code>). Подсветка активного пункта — это{" "}
-              <code>data-[selected=true]</code>, а не <code>:hover</code>.
+              <strong>Клавиатура:</strong> ↑/↓ — перемещение по списку, Enter —
+              выбрать. Активный пункт подсвечивается сам.
             </li>
             <li>
-              <strong>Два режима:</strong> встроенный{" "}
-              <code>&lt;Command&gt;</code> (ниже) и{" "}
-              <code>&lt;CommandDialog&gt;</code> — тот же список в модальном
-              диалоге, по <kbd>⌘K</kbd> / <kbd>Ctrl+K</kbd>.
+              <strong>Два режима:</strong> встроенный <code>Command</code> (ниже)
+              и <code>CommandDialog</code> — тот же список во всплывающем окне, по{" "}
+              <kbd>⌘K</kbd> / <kbd>Ctrl+K</kbd>.
             </li>
             <li>
-              Группы, разделители и горячие клавиши (<code>CommandShortcut</code>)
-              — как в настоящих палитрах команд.
+              Группы, разделители и подсказки горячих клавиш — как в настоящих
+              палитрах команд.
             </li>
           </ul>
         </CardContent>

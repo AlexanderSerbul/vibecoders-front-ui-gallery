@@ -41,19 +41,19 @@ export function SheetDemo() {
 
       <Card className="mb-8">
         <CardHeader>
-          <CardTitle>Тот же Radix, что и у Dialog</CardTitle>
+          <CardTitle>Что важно</CardTitle>
           <CardDescription>
-            Sheet построен на том же примитиве @radix-ui/react-dialog.
+            По сути это <code>Dialog</code>, только выезжает сбоку.
           </CardDescription>
         </CardHeader>
         <CardContent>
           <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
             <li>
-              Поведение и доступность — как у Dialog: ловушка фокуса, Esc, клик по
-              фону, портал, ARIA.
+              Ведёт себя как <code>Dialog</code>: затемняет страницу, закрывается по Esc и
+              клику по фону, работает с клавиатуры.
             </li>
-            <li>Отличие — позиция и анимация: выезжает от края.</li>
-            <li>Проп side: right · left · top · bottom.</li>
+            <li>Отличие — выезжает от края экрана с анимацией.</li>
+            <li>Можно открыть с любого края: справа, слева, сверху или снизу.</li>
           </ul>
         </CardContent>
       </Card>

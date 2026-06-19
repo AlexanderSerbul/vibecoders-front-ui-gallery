@@ -40,22 +40,20 @@ export function HoverCardDemo() {
         <CardContent>
           <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
             <li>
-              <strong>Триггер — наведение мышью</strong> (как Tooltip), но{" "}
-              <strong>не фокус с клавиатуры</strong>. Поэтому это всегда
-              необязательный предпросмотр — важное дублируй в доступном месте.
+              <strong>Срабатывает на наведение мышью</strong> (как <code>Tooltip</code>),
+              но не с клавиатуры. Поэтому это всегда необязательный предпросмотр —
+              что-то важное дублируй в доступном месте.
             </li>
             <li>
               <strong>Содержимое богатое:</strong> фото, заголовки, ссылки — а
-              не одна строка, как в Tooltip.
+              не одна строка, как в <code>Tooltip</code>.
             </li>
             <li>
-              <strong>Заметная задержка</strong> открытия и закрытия (
-              <code>openDelay</code> / <code>closeDelay</code>), чтобы карточка
-              не мигала и курсор успевал доехать до неё.
+              <strong>Заметная задержка</strong> перед появлением и исчезновением,
+              чтобы карточка не мигала и курсор успевал доехать до неё.
             </li>
             <li>
-              Позиционируется как Popover/Tooltip — <code>side</code>,{" "}
-              <code>align</code>, <code>sideOffset</code>, портал.
+              Появляется рядом с именем и сам выбирает удобную сторону.
             </li>
           </ul>
         </CardContent>

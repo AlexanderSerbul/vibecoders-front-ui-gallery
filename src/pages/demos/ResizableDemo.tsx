@@ -106,9 +106,10 @@ export function ResizableDemo() {
           Resizable
         </h1>
         <p className="mt-2 text-muted-foreground">
-          Перетаскиваемые панели (split-view) — тянешь границу, и размеры
-          меняются. Не Radix: библиотека <code>react-resizable-panels</code>.
-          Панели можно вкладывать — отсюда раскладки как в IDE.
+          Перетаскиваемые панели: тянешь границу между ними — они меняют размер.
+          Панели вкладываются друг в друга, поэтому из них собираются раскладки
+          как в редакторе кода: файлы слева, редактор и терминал справа. Под
+          капотом — react-resizable-panels.
         </p>
       </header>
 
@@ -116,29 +117,22 @@ export function ResizableDemo() {
         <CardHeader>
           <CardTitle>Что важно</CardTitle>
           <CardDescription>
-            Группы панелей, проценты, вложенность и сохранение размеров.
+            Как делить область на панели, вкладывать их и запоминать размеры.
           </CardDescription>
         </CardHeader>
         <CardContent>
           <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
             <li>
-              <strong>Группа + панели + ручки:</strong> <code>direction</code> —
-              <code>horizontal</code> или <code>vertical</code>; размеры в
-              процентах (<code>defaultSize</code> / <code>minSize</code> /{" "}
-              <code>maxSize</code>).
+              Делишь область на панели по горизонтали или вертикали и задаёшь,
+              какую часть занимает каждая.
             </li>
             <li>
-              <strong>Вложенность:</strong> панель может содержать другую группу
-              — так и собираются IDE-раскладки (сайдбар | редактор / терминал).
+              <strong>Вложенность:</strong> внутри панели можно сделать ещё одно
+              деление — так и собираются раскладки как в редакторе кода (файлы |
+              редактор / терминал).
             </li>
-            <li>
-              <strong>Ручка</strong> тянется и мышью, и клавиатурой (стрелки):
-              это <code>separator</code> с <code>aria-valuenow</code>.
-            </li>
-            <li>
-              <strong>Сохранение размеров</strong> между перезагрузками — проп{" "}
-              <code>autoSaveId</code> (кладёт в <code>localStorage</code>).
-            </li>
+            <li>Границу двигаешь мышью или стрелками на клавиатуре.</li>
+            <li>Размеры можно запоминать между перезагрузками страницы.</li>
           </ul>
         </CardContent>
       </Card>

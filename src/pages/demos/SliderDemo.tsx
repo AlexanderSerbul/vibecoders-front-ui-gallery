@@ -24,8 +24,8 @@ export function SliderDemo() {
           Slider
         </h1>
         <p className="mt-2 text-muted-foreground">
-          Ползунок для выбора числа или диапазона перетаскиванием. На Radix — с
-          полной клавиатурой и доступностью.
+          Ползунок для выбора числа или диапазона перетаскиванием. На основе
+          Radix, доступен с клавиатуры и для скринридеров.
         </p>
       </header>
 
@@ -39,22 +39,17 @@ export function SliderDemo() {
         <CardContent>
           <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
             <li>
-              <strong>Значение — массив чисел.</strong> Один бегунок —{" "}
-              <code>[40]</code>, диапазон (два бегунка) —{" "}
-              <code>[200, 800]</code>. Сколько чисел — столько бегунков (Thumb).
+              <strong>Одно значение или диапазон:</strong> один бегунок выбирает
+              число, два бегунка — диапазон «от и до». Сколько значений нужно —
+              столько бегунков.
             </li>
             <li>
-              <strong>Контролируемый:</strong> <code>value</code> /{" "}
-              <code>onValueChange</code>, как у формы.
+              <strong>Своя шкала и шаг:</strong> задаёшь минимум, максимум и
+              насколько прыгает значение за один шаг.
             </li>
             <li>
-              <strong>Шкала и шаг:</strong> <code>min</code>, <code>max</code>,{" "}
-              <code>step</code>.
-            </li>
-            <li>
-              <strong>Клавиатура и a11y:</strong> стрелки (± шаг), Home/End,
-              PageUp/PageDown; у каждого бегунка роль <code>slider</code> и{" "}
-              <code>aria-valuenow</code>.
+              <strong>Доступно всем:</strong> тянешь мышью или двигаешь бегунок
+              стрелками с клавиатуры, понятно скринридерам.
             </li>
           </ul>
         </CardContent>

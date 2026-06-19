@@ -52,16 +52,12 @@ export function RadioGroupDemo() {
               снялся сам. Checkbox так не делает (там каждый сам по себе).
             </li>
             <li>
-              <strong>Контролируемый:</strong> <code>value</code> /{" "}
-              <code>onValueChange</code> — строка (значение выбранного).
+              <strong>Удобная клавиатура:</strong> заходишь в группу один раз, а
+              дальше переключаешься между вариантами стрелками.
             </li>
             <li>
-              <strong>Клавиатура:</strong> Tab заходит в группу один раз, дальше
-              — стрелками между вариантами (как нативные radio).
-            </li>
-            <li>
-              <strong>Доступность:</strong> роли <code>radiogroup</code> /{" "}
-              <code>radio</code>, связь каждого пункта с <code>Label</code>.
+              <strong>Доступно всем:</strong> работает мышью и с клавиатуры,
+              понятно скринридерам.
             </li>
           </ul>
         </CardContent>
