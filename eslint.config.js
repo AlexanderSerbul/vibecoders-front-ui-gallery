@@ -62,4 +62,14 @@ export default defineConfig([
       '@typescript-eslint/no-unnecessary-type-assertion': 'off',
     },
   },
+
+  // The canonical shadcn Carousel syncs Embla's initial can-scroll state by
+  // calling setState in a mount effect — flagged by the React-Compiler rule,
+  // but it's the intended external-system sync.
+  {
+    files: ['src/components/ui/carousel.tsx'],
+    rules: {
+      'react-hooks/set-state-in-effect': 'off',
+    },
+  },
 ])

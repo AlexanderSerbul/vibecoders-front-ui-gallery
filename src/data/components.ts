@@ -49,6 +49,7 @@ export const componentGroups: ComponentGroup[] = [
       { to: "/components/sortable-tabs", label: "Sortable Tabs" },
       { to: "/components/resizable", label: "Resizable" },
       { to: "/components/scroll-area", label: "Scroll Area" },
+      { to: "/components/carousel", label: "Carousel" },
     ],
   },
   {
