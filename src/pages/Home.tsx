@@ -17,7 +17,7 @@ import { PromptBlock } from "@/components/PromptBlock"
 import { componentGroups } from "@/data/components"
 
 const STARTER_PROMPT =
-  "Сделай сайт на React/Vite/Tailwind/TypeScript с компонентами shadcn/ui"
+  "Сделай пустой минимальный сайт на React/Vite/Tailwind с компонентами shadcn/ui, пока без TypeScript, мы его добавим отдельно"
 
 const NEXT_PROMPT =
   "Добавь Menubar с разделами «Главная», «О компании» и «Заявка». На " +
