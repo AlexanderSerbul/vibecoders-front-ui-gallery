@@ -45,6 +45,7 @@ import { AlertDemo } from "@/pages/demos/AlertDemo"
 import { TextareaDemo } from "@/pages/demos/TextareaDemo"
 import { BadgeDemo } from "@/pages/demos/BadgeDemo"
 import { SkeletonDemo } from "@/pages/demos/SkeletonDemo"
+import { AspectRatioDemo } from "@/pages/demos/AspectRatioDemo"
 import { ToastDemo } from "@/pages/demos/ToastDemo"
 import { SidebarDemo } from "@/pages/demos/SidebarDemo"
 
@@ -112,6 +113,10 @@ function App() {
           <Route path="/components/alert" element={<AlertDemo />} />
           <Route path="/components/badge" element={<BadgeDemo />} />
           <Route path="/components/skeleton" element={<SkeletonDemo />} />
+          <Route
+            path="/components/aspect-ratio"
+            element={<AspectRatioDemo />}
+          />
           <Route path="/components/toast" element={<ToastDemo />} />
         </Route>
 
