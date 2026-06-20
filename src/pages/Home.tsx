@@ -235,7 +235,16 @@ export function Home() {
           сервере, без лишних трат).
         </p>
         <p className="mt-3 text-sm text-muted-foreground">
-          Важно для Windows: заранее поставь{" "}
+          Что поставить заранее:{" "}
+          <a
+            href="https://nodejs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium underline underline-offset-4 hover:text-foreground"
+          >
+            Node.js
+          </a>{" "}
+          (им собирается сайт), а на Windows ещё и{" "}
           <a
             href="https://git-scm.com/download/win"
             target="_blank"
@@ -244,8 +253,21 @@ export function Home() {
           >
             Git Bash
           </a>{" "}
-          (бесплатно) — именно в нём запускаются команды деплоя. На macOS и Linux
-          он уже есть.
+          — в нём запускаются команды деплоя (на macOS и Linux он уже есть).
+        </p>
+        <p className="mt-3 text-sm text-muted-foreground">
+          Ещё пригодится{" "}
+          <a
+            href="https://www.python.org/downloads/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium underline underline-offset-4 hover:text-foreground"
+          >
+            Python
+          </a>{" "}
+          — даже для сайта на Node.js: ИИ-ассистент часто пишет на нём небольшие
+          вспомогательные скрипты и быстро проверяет на нём идеи, так что лучше,
+          чтобы он уже стоял.
         </p>
       </section>
 
