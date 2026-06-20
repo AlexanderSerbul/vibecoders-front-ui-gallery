@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Sparkles, Star } from "lucide-react"
+import { Play, Sparkles, Star } from "lucide-react"
 import { Link } from "react-router-dom"
 
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
@@ -197,6 +197,35 @@ export function Home() {
           — это компоненты из справочника ниже: кликни по имени, чтобы
           посмотреть, как каждый выглядит и ведёт себя.
         </p>
+      </section>
+
+      <section className="mb-12 max-w-2xl">
+        <h2 className="text-xl font-semibold tracking-tight">Видео-уроки</h2>
+        <p className="mt-2 text-muted-foreground">
+          Хочешь увидеть весь процесс вживую? Я подробно, по шагам показываю,
+          как вайбкодер создаёт такой сайт в Claude — от пустого проекта до
+          публикации:
+        </p>
+        <div className="mt-4 flex flex-wrap gap-3">
+          <a
+            href="https://rutube.ru/video/6e21169231ae6895cb4d812097f6a234/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-md border px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
+          >
+            <Play className="size-4" />
+            RuTube
+          </a>
+          <a
+            href="https://vkvideo.ru/video-238518064_456239024"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-md border px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
+          >
+            <Play className="size-4" />
+            VK Видео
+          </a>
+        </div>
       </section>
 
       <section className="mb-12 max-w-2xl">

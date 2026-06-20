@@ -6,6 +6,8 @@
 
 **Живая демка:** https://app-117900122a91.vibecode.bitrix24.tech
 
+**Видео-уроки** — создание сайта вайбкодером по шагам в Claude: [RuTube](https://rutube.ru/video/6e21169231ae6895cb4d812097f6a234/) · [VK Видео](https://vkvideo.ru/video-238518064_456239024)
+
 **Стек:** Vite · React · TypeScript · Tailwind CSS v4 · shadcn/ui
 
 ## Запуск
