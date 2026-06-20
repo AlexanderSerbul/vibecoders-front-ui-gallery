@@ -1,5 +1,7 @@
+import { Sparkles } from "lucide-react"
 import { Link } from "react-router-dom"
 
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { Badge } from "@/components/ui/badge"
 import {
   Card,
@@ -8,6 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { GithubIcon } from "@/components/GithubIcon"
 import { PromptBlock } from "@/components/PromptBlock"
 import { componentGroups } from "@/data/components"
 
@@ -18,6 +21,39 @@ const NEXT_PROMPT =
   "Добавь Menubar с разделами «Главная», «О компании» и «Заявка». На " +
   "странице «Заявка» свёрстай Form для заявки, а после отправки показывай " +
   "Dialog с подтверждением."
+
+const stack = [
+  {
+    name: "React",
+    href: "https://github.com/facebook/react",
+    tagline: "интерфейс из кусочков",
+    text: "Собирает страницу из готовых блоков-компонентов и сам перерисовывает их, когда данные меняются. Самая популярная библиотека для интерфейсов — огромное сообщество и масса готовых решений.",
+  },
+  {
+    name: "Vite",
+    href: "https://github.com/vitejs/vite",
+    tagline: "движок стройки",
+    text: "Мгновенно запускает сайт у тебя на компьютере и сразу показывает правки в браузере. А для публикации собирает всё в компактные быстрые файлы. Свежий и шустрый инструмент.",
+  },
+  {
+    name: "TypeScript",
+    href: "https://github.com/microsoft/TypeScript",
+    tagline: "JavaScript с проверкой",
+    text: "Тот же JavaScript, но с подсказками и проверкой на лету: ловит опечатки и несостыковки, пока ты пишешь, — меньше глупых ошибок. Почти стандарт для серьёзных проектов.",
+  },
+  {
+    name: "Tailwind CSS",
+    href: "https://github.com/tailwindlabs/tailwindcss",
+    tagline: "оформление кирпичиками",
+    text: "Стили задаёшь прямо в разметке готовыми классами (отступ, цвет, скругление) — не надо прыгать в отдельные файлы со стилями. Быстро и единообразно.",
+  },
+  {
+    name: "shadcn/ui",
+    href: "https://github.com/shadcn-ui/ui",
+    tagline: "готовые компоненты",
+    text: "Те самые компоненты из этой галереи. Не библиотека-зависимость, а код, который копируется прямо к тебе в проект, — правишь под себя. Доступность из коробки (на основе Radix).",
+  },
+]
 
 export function Home() {
   return (
@@ -81,6 +117,49 @@ export function Home() {
           посмотреть, как каждый выглядит и ведёт себя.
         </p>
       </section>
+
+      <section className="mb-12 max-w-3xl">
+        <h2 className="text-xl font-semibold tracking-tight">Что за стек</h2>
+        <p className="mt-2 text-muted-foreground">
+          Те самые слова из промпта выше — это набор инструментов, на котором
+          собран сайт. Один из самых популярных и современных. Вот что каждый
+          делает, простыми словами:
+        </p>
+        <div className="mt-4 grid gap-4 sm:grid-cols-2">
+          {stack.map((tool) => (
+            <div key={tool.name} className="rounded-lg border p-4">
+              <a
+                href={tool.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 font-semibold hover:underline"
+              >
+                {tool.name}
+                <GithubIcon className="size-3.5 shrink-0 text-muted-foreground" />
+              </a>
+              <div className="text-xs text-muted-foreground">{tool.tagline}</div>
+              <p className="mt-2 text-sm text-muted-foreground">{tool.text}</p>
+            </div>
+          ))}
+        </div>
+        <p className="mt-4 text-sm text-muted-foreground">
+          Вместе это один из самых ходовых современных наборов для веб-интерфейсов:
+          всё бесплатное и открытое, с большими сообществами — легко находить
+          ответы и готовые решения. Не «модная игрушка на месяц», а проверенный
+          стек, на котором работают тысячи команд.
+        </p>
+      </section>
+
+      <Alert className="mb-12 border-primary/30 bg-primary/5">
+        <Sparkles />
+        <AlertTitle>Программировать самому не придётся</AlertTitle>
+        <AlertDescription>
+          Ничего из этого стека тебе не нужно писать руками. Код целиком пишет
+          ИИ-агент прямо в чате — ты словами объясняешь, что хочешь, а он
+          собирает и правит. Этот сайт, кстати, так и сделан — от начала и до
+          конца.
+        </AlertDescription>
+      </Alert>
 
       <div className="grid gap-6 sm:grid-cols-2">
         {componentGroups.map((group) => (
