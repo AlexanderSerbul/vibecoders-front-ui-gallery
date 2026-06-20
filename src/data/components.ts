@@ -110,6 +110,7 @@ export const componentGroups: ComponentGroup[] = [
     description: "Небольшие UI-элементы: аватары, прогресс, плашки и навигация.",
     items: [
       { to: "/components/avatar", label: "Avatar" },
+      { to: "/components/badge", label: "Badge" },
       { to: "/components/progress", label: "Progress" },
       { to: "/components/alert", label: "Alert" },
       { to: "/components/pagination", label: "Pagination" },
