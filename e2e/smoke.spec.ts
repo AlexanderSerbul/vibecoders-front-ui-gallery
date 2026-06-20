@@ -19,7 +19,17 @@ for (const { path, label } of routes) {
     const pageErrors: string[] = []
 
     page.on("console", (msg) => {
-      if (msg.type() === "error") consoleErrors.push(msg.text())
+      if (msg.type() !== "error") return
+      // The Home page fetches GitHub star counts client-side; if that request is
+      // rate-limited or offline the browser logs a resource error that isn't an
+      // app bug, so ignore anything pointing at the GitHub API.
+      if (
+        msg.location().url.includes("api.github.com") ||
+        msg.text().includes("api.github.com")
+      ) {
+        return
+      }
+      consoleErrors.push(msg.text())
     })
     page.on("pageerror", (err) => {
       pageErrors.push(err.message)

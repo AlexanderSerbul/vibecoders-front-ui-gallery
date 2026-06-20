@@ -1,4 +1,5 @@
-import { Sparkles } from "lucide-react"
+import { useEffect, useState } from "react"
+import { Sparkles, Star } from "lucide-react"
 import { Link } from "react-router-dom"
 
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
@@ -10,6 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { Skeleton } from "@/components/ui/skeleton"
 import { GithubIcon } from "@/components/GithubIcon"
 import { PromptBlock } from "@/components/PromptBlock"
 import { componentGroups } from "@/data/components"
@@ -55,7 +57,68 @@ const stack = [
   },
 ]
 
+const CACHE_TTL = 60 * 60 * 1000 // 1 час
+
+const starFmt = new Intl.NumberFormat("en", {
+  notation: "compact",
+  maximumFractionDigits: 1,
+})
+
+function repoOf(href: string) {
+  return href.replace("https://github.com/", "")
+}
+
+// Cache-first load of a repo's star count from GitHub's public API (no token →
+// 60 req/h per IP; the localStorage cache keeps repeat visits off the wire).
+// Returns null on any failure (offline / rate-limited / unexpected data).
+async function loadStars(repo: string): Promise<number | null> {
+  try {
+    const raw = localStorage.getItem(`gh-stars:${repo}`)
+    if (raw) {
+      const cached = JSON.parse(raw) as { count: number; ts: number }
+      if (Date.now() - cached.ts < CACHE_TTL) return cached.count
+    }
+  } catch {
+    // ignore an unreadable cache entry
+  }
+  try {
+    const res = await fetch(`https://api.github.com/repos/${repo}`)
+    if (!res.ok) return null
+    const data = (await res.json()) as { stargazers_count?: number }
+    const count =
+      typeof data.stargazers_count === "number" ? data.stargazers_count : null
+    if (count !== null) {
+      try {
+        localStorage.setItem(
+          `gh-stars:${repo}`,
+          JSON.stringify({ count, ts: Date.now() })
+        )
+      } catch {
+        // ignore storage being full / disabled
+      }
+    }
+    return count
+  } catch {
+    return null
+  }
+}
+
 export function Home() {
+  const [stars, setStars] = useState<Record<string, number | null>>({})
+
+  useEffect(() => {
+    let active = true
+    for (const tool of stack) {
+      const repo = repoOf(tool.href)
+      void loadStars(repo).then((count) => {
+        if (active) setStars((s) => ({ ...s, [repo]: count }))
+      })
+    }
+    return () => {
+      active = false
+    }
+  }, [])
+
   return (
     <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
       <section className="mb-12 max-w-2xl">
@@ -72,6 +135,17 @@ export function Home() {
           карточек ниже.
         </p>
       </section>
+
+      <Alert className="mb-12 border-primary/30 bg-primary/5">
+        <Sparkles />
+        <AlertTitle>Программировать самому не придётся</AlertTitle>
+        <AlertDescription>
+          Тебе вообще не придётся ничего программировать самому. Код целиком
+          пишет ИИ-агент прямо в чате — ты словами объясняешь, что хочешь, а он
+          собирает и правит. Этот сайт, кстати, так и сделан — от начала и до
+          конца.
+        </AlertDescription>
+      </Alert>
 
       <section className="mb-12 max-w-2xl">
         <h2 className="text-xl font-semibold tracking-tight">С чего начать</h2>
@@ -126,21 +200,36 @@ export function Home() {
           делает, простыми словами:
         </p>
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
-          {stack.map((tool) => (
-            <div key={tool.name} className="rounded-lg border p-4">
-              <a
-                href={tool.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 font-semibold hover:underline"
-              >
-                {tool.name}
-                <GithubIcon className="size-3.5 shrink-0 text-muted-foreground" />
-              </a>
-              <div className="text-xs text-muted-foreground">{tool.tagline}</div>
-              <p className="mt-2 text-sm text-muted-foreground">{tool.text}</p>
-            </div>
-          ))}
+          {stack.map((tool) => {
+            const count = stars[repoOf(tool.href)]
+            return (
+              <div key={tool.name} className="rounded-lg border p-4">
+                <div className="flex items-center justify-between gap-2">
+                  <a
+                    href={tool.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 font-semibold hover:underline"
+                  >
+                    {tool.name}
+                    <GithubIcon className="size-3.5 shrink-0 text-muted-foreground" />
+                  </a>
+                  {count === undefined ? (
+                    <Skeleton className="h-4 w-12 shrink-0 rounded" />
+                  ) : count === null ? null : (
+                    <span className="inline-flex shrink-0 items-center gap-1 text-xs text-muted-foreground tabular-nums">
+                      <Star className="size-3.5 fill-amber-400 text-amber-400" />
+                      {starFmt.format(count)}
+                    </span>
+                  )}
+                </div>
+                <div className="text-xs text-muted-foreground">
+                  {tool.tagline}
+                </div>
+                <p className="mt-2 text-sm text-muted-foreground">{tool.text}</p>
+              </div>
+            )
+          })}
         </div>
         <p className="mt-4 text-sm text-muted-foreground">
           Вместе это один из самых ходовых современных наборов для веб-интерфейсов:
@@ -149,17 +238,6 @@ export function Home() {
           стек, на котором работают тысячи команд.
         </p>
       </section>
-
-      <Alert className="mb-12 border-primary/30 bg-primary/5">
-        <Sparkles />
-        <AlertTitle>Программировать самому не придётся</AlertTitle>
-        <AlertDescription>
-          Ничего из этого стека тебе не нужно писать руками. Код целиком пишет
-          ИИ-агент прямо в чате — ты словами объясняешь, что хочешь, а он
-          собирает и правит. Этот сайт, кстати, так и сделан — от начала и до
-          конца.
-        </AlertDescription>
-      </Alert>
 
       <div className="grid gap-6 sm:grid-cols-2">
         {componentGroups.map((group) => (
