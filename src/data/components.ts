@@ -84,6 +84,7 @@ export const componentGroups: ComponentGroup[] = [
       { to: "/components/switch", label: "Switch" },
       { to: "/components/checkbox", label: "Checkbox" },
       { to: "/components/toggle", label: "Toggle" },
+      { to: "/components/toggle-group", label: "Toggle Group" },
     ],
   },
   {

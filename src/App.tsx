@@ -26,6 +26,7 @@ import { SwitchDemo } from "@/pages/demos/SwitchDemo"
 import { CheckboxDemo } from "@/pages/demos/CheckboxDemo"
 import { RadioGroupDemo } from "@/pages/demos/RadioGroupDemo"
 import { ToggleDemo } from "@/pages/demos/ToggleDemo"
+import { ToggleGroupDemo } from "@/pages/demos/ToggleGroupDemo"
 import { InputOTPDemo } from "@/pages/demos/InputOTPDemo"
 import { AccordionDemo } from "@/pages/demos/AccordionDemo"
 import { CollapsibleDemo } from "@/pages/demos/CollapsibleDemo"
@@ -79,6 +80,10 @@ function App() {
           <Route path="/components/checkbox" element={<CheckboxDemo />} />
           <Route path="/components/radio-group" element={<RadioGroupDemo />} />
           <Route path="/components/toggle" element={<ToggleDemo />} />
+          <Route
+            path="/components/toggle-group"
+            element={<ToggleGroupDemo />}
+          />
           <Route path="/components/input-otp" element={<InputOTPDemo />} />
           <Route path="/components/accordion" element={<AccordionDemo />} />
           <Route path="/components/collapsible" element={<CollapsibleDemo />} />
