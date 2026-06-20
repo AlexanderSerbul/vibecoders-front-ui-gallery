@@ -46,6 +46,12 @@ import { TextareaDemo } from "@/pages/demos/TextareaDemo"
 import { BadgeDemo } from "@/pages/demos/BadgeDemo"
 import { SkeletonDemo } from "@/pages/demos/SkeletonDemo"
 import { AspectRatioDemo } from "@/pages/demos/AspectRatioDemo"
+import { ButtonDemo } from "@/pages/demos/ButtonDemo"
+import { InputDemo } from "@/pages/demos/InputDemo"
+import { LabelDemo } from "@/pages/demos/LabelDemo"
+import { CardDemo } from "@/pages/demos/CardDemo"
+import { TableDemo } from "@/pages/demos/TableDemo"
+import { SeparatorDemo } from "@/pages/demos/SeparatorDemo"
 import { ToastDemo } from "@/pages/demos/ToastDemo"
 import { SidebarDemo } from "@/pages/demos/SidebarDemo"
 
@@ -117,6 +123,12 @@ function App() {
             path="/components/aspect-ratio"
             element={<AspectRatioDemo />}
           />
+          <Route path="/components/button" element={<ButtonDemo />} />
+          <Route path="/components/input" element={<InputDemo />} />
+          <Route path="/components/label" element={<LabelDemo />} />
+          <Route path="/components/card" element={<CardDemo />} />
+          <Route path="/components/table" element={<TableDemo />} />
+          <Route path="/components/separator" element={<SeparatorDemo />} />
           <Route path="/components/toast" element={<ToastDemo />} />
         </Route>
 

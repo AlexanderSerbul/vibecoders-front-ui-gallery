@@ -119,4 +119,16 @@ export const componentGroups: ComponentGroup[] = [
       { to: "/components/breadcrumb", label: "Breadcrumb" },
     ],
   },
+  {
+    label: "Базовые",
+    description: "Кирпичики, из которых собрано всё остальное.",
+    items: [
+      { to: "/components/button", label: "Button" },
+      { to: "/components/input", label: "Input" },
+      { to: "/components/label", label: "Label" },
+      { to: "/components/card", label: "Card" },
+      { to: "/components/table", label: "Table" },
+      { to: "/components/separator", label: "Separator" },
+    ],
+  },
 ]
