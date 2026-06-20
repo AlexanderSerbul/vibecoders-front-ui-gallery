@@ -44,6 +44,7 @@ import { BreadcrumbDemo } from "@/pages/demos/BreadcrumbDemo"
 import { AlertDemo } from "@/pages/demos/AlertDemo"
 import { TextareaDemo } from "@/pages/demos/TextareaDemo"
 import { BadgeDemo } from "@/pages/demos/BadgeDemo"
+import { SkeletonDemo } from "@/pages/demos/SkeletonDemo"
 import { ToastDemo } from "@/pages/demos/ToastDemo"
 import { SidebarDemo } from "@/pages/demos/SidebarDemo"
 
@@ -110,6 +111,7 @@ function App() {
           <Route path="/components/breadcrumb" element={<BreadcrumbDemo />} />
           <Route path="/components/alert" element={<AlertDemo />} />
           <Route path="/components/badge" element={<BadgeDemo />} />
+          <Route path="/components/skeleton" element={<SkeletonDemo />} />
           <Route path="/components/toast" element={<ToastDemo />} />
         </Route>
 
