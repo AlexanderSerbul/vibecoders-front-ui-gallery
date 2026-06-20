@@ -38,6 +38,7 @@ import { DataTableDemo } from "@/pages/demos/DataTableDemo"
 import { ChartDemo } from "@/pages/demos/ChartDemo"
 import { CarouselDemo } from "@/pages/demos/CarouselDemo"
 import { AvatarDemo } from "@/pages/demos/AvatarDemo"
+import { PaginationDemo } from "@/pages/demos/PaginationDemo"
 import { ToastDemo } from "@/pages/demos/ToastDemo"
 import { SidebarDemo } from "@/pages/demos/SidebarDemo"
 
@@ -98,6 +99,7 @@ function App() {
           <Route path="/components/chart" element={<ChartDemo />} />
           <Route path="/components/carousel" element={<CarouselDemo />} />
           <Route path="/components/avatar" element={<AvatarDemo />} />
+          <Route path="/components/pagination" element={<PaginationDemo />} />
           <Route path="/components/toast" element={<ToastDemo />} />
         </Route>
 

@@ -106,7 +106,10 @@ export const componentGroups: ComponentGroup[] = [
   },
   {
     label: "Элементы",
-    description: "Небольшие UI-примитивы: аватары, индикаторы, заглушки.",
-    items: [{ to: "/components/avatar", label: "Avatar" }],
+    description: "Небольшие UI-элементы: аватары и постраничная навигация.",
+    items: [
+      { to: "/components/avatar", label: "Avatar" },
+      { to: "/components/pagination", label: "Pagination" },
+    ],
   },
 ]
