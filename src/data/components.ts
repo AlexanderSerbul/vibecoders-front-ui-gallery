@@ -17,6 +17,7 @@ export const componentGroups: ComponentGroup[] = [
     description: "Поверх страницы: диалоги, панели и уведомления.",
     items: [
       { to: "/components/dialog", label: "Dialog" },
+      { to: "/components/alert-dialog", label: "Alert Dialog" },
       { to: "/components/sheet", label: "Sheet" },
       { to: "/components/drawer", label: "Drawer" },
       { to: "/components/toast", label: "Toast" },
@@ -37,6 +38,7 @@ export const componentGroups: ComponentGroup[] = [
       "Списки команд и действий: выпадающее меню, строка меню, контекст и палитра.",
     items: [
       { to: "/components/dropdown-menu", label: "Dropdown Menu" },
+      { to: "/components/navigation-menu", label: "Navigation Menu" },
       { to: "/components/menubar", label: "Menubar" },
       { to: "/components/context-menu", label: "Context Menu" },
       { to: "/components/command", label: "Command" },

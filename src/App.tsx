@@ -5,11 +5,13 @@ import { Toaster } from "@/components/ui/sonner"
 import { Home } from "@/pages/Home"
 import { AboutProject } from "@/pages/AboutProject"
 import { DialogDemo } from "@/pages/demos/DialogDemo"
+import { AlertDialogDemo } from "@/pages/demos/AlertDialogDemo"
 import { SheetDemo } from "@/pages/demos/SheetDemo"
 import { DrawerDemo } from "@/pages/demos/DrawerDemo"
 import { MenubarDemo } from "@/pages/demos/MenubarDemo"
 import { ContextMenuDemo } from "@/pages/demos/ContextMenuDemo"
 import { DropdownMenuDemo } from "@/pages/demos/DropdownMenuDemo"
+import { NavigationMenuDemo } from "@/pages/demos/NavigationMenuDemo"
 import { PopoverDemo } from "@/pages/demos/PopoverDemo"
 import { TooltipDemo } from "@/pages/demos/TooltipDemo"
 import { HoverCardDemo } from "@/pages/demos/HoverCardDemo"
@@ -47,6 +49,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutProject />} />
           <Route path="/components/dialog" element={<DialogDemo />} />
+          <Route
+            path="/components/alert-dialog"
+            element={<AlertDialogDemo />}
+          />
           <Route path="/components/sheet" element={<SheetDemo />} />
           <Route path="/components/drawer" element={<DrawerDemo />} />
           <Route path="/components/menubar" element={<MenubarDemo />} />
@@ -54,6 +60,10 @@ function App() {
           <Route
             path="/components/dropdown-menu"
             element={<DropdownMenuDemo />}
+          />
+          <Route
+            path="/components/navigation-menu"
+            element={<NavigationMenuDemo />}
           />
           <Route path="/components/popover" element={<PopoverDemo />} />
           <Route path="/components/tooltip" element={<TooltipDemo />} />
