@@ -20,7 +20,7 @@ export function PromptBlock({ prompt }: { prompt: string }) {
 
   return (
     <div className="flex items-start justify-between gap-3 rounded-lg border bg-muted/40 p-4">
-      <code className="text-sm leading-relaxed">{prompt}</code>
+      <code className="text-sm leading-relaxed whitespace-pre-line">{prompt}</code>
       <Button size="sm" variant="outline" onClick={copy} className="shrink-0">
         {copied ? <Check /> : <Copy />}
         {copied ? "Скопировано" : "Копировать"}

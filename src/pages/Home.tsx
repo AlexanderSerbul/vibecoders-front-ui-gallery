@@ -24,6 +24,13 @@ const NEXT_PROMPT =
   "странице «Заявка» свёрстай Form для заявки, а после отправки показывай " +
   "Dialog с подтверждением."
 
+const DEPLOY_PROMPT =
+  "Выложи этот сайт в интернет на Вайбкод, чтобы он открывался по ссылке.\n" +
+  "Сначала посмотри готовую папку deploy на GitHub — там проверенный скрипт и " +
+  "инструкция: https://github.com/AlexanderSerbul/vibecoders-front-ui-gallery/tree/main/deploy\n" +
+  "Мой ключ: vibe_api_…\n" +
+  "Документация: https://vibecode.bitrix24.tech/v1/me"
+
 const stack = [
   {
     name: "React",
@@ -189,6 +196,56 @@ export function Home() {
           </Link>{" "}
           — это компоненты из справочника ниже: кликни по имени, чтобы
           посмотреть, как каждый выглядит и ведёт себя.
+        </p>
+      </section>
+
+      <section className="mb-12 max-w-2xl">
+        <h2 className="text-xl font-semibold tracking-tight">
+          Как выложить сайт в интернет
+        </h2>
+        <p className="mt-2 text-muted-foreground">
+          Когда сайт готов, его не нужно вручную «ставить на сервер». Попроси
+          ИИ-агента прямо в чате — он сам соберёт сайт, поднимет сервер и
+          опубликует его. Тебе останется открыть ссылку и поделиться ею.
+          Например, напиши:
+        </p>
+        <div className="mt-4">
+          <PromptBlock prompt={DEPLOY_PROMPT} />
+        </div>
+        <p className="mt-3 text-sm text-muted-foreground">
+          Ключ — строка вида{" "}
+          <code className="rounded bg-muted px-1 py-0.5 font-mono text-[0.85em]">
+            vibe_api_…
+          </code>{" "}
+          — берётся в личном кабинете{" "}
+          <a
+            href="https://vibecode.bitrix24.tech"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium underline underline-offset-4 hover:text-foreground"
+          >
+            Вайбкода
+          </a>
+          . В ответ агент пришлёт адрес, по которому сайт открывается у любого
+          человека, — это и есть твой сайт в интернете.
+        </p>
+        <p className="mt-3 text-sm text-muted-foreground">
+          Обновлять сайт потом — тем же способом: поправил, снова попросил
+          агента выложить — и по той же ссылке уже новая версия (на том же
+          сервере, без лишних трат).
+        </p>
+        <p className="mt-3 text-sm text-muted-foreground">
+          Важно для Windows: заранее поставь{" "}
+          <a
+            href="https://git-scm.com/download/win"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium underline underline-offset-4 hover:text-foreground"
+          >
+            Git Bash
+          </a>{" "}
+          (бесплатно) — именно в нём запускаются команды деплоя. На macOS и Linux
+          он уже есть.
         </p>
       </section>
 
