@@ -42,6 +42,7 @@ import { PaginationDemo } from "@/pages/demos/PaginationDemo"
 import { ProgressDemo } from "@/pages/demos/ProgressDemo"
 import { BreadcrumbDemo } from "@/pages/demos/BreadcrumbDemo"
 import { AlertDemo } from "@/pages/demos/AlertDemo"
+import { TextareaDemo } from "@/pages/demos/TextareaDemo"
 import { ToastDemo } from "@/pages/demos/ToastDemo"
 import { SidebarDemo } from "@/pages/demos/SidebarDemo"
 
@@ -89,6 +90,7 @@ function App() {
             element={<ToggleGroupDemo />}
           />
           <Route path="/components/input-otp" element={<InputOTPDemo />} />
+          <Route path="/components/textarea" element={<TextareaDemo />} />
           <Route path="/components/accordion" element={<AccordionDemo />} />
           <Route path="/components/collapsible" element={<CollapsibleDemo />} />
           <Route

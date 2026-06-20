@@ -89,11 +89,12 @@ export const componentGroups: ComponentGroup[] = [
   },
   {
     label: "Контролы",
-    description: "Числовой ввод и формы с валидацией.",
+    description: "Ввод текста и чисел, формы с валидацией.",
     items: [
       { to: "/components/slider", label: "Slider" },
       { to: "/components/form", label: "Form" },
       { to: "/components/input-otp", label: "Input OTP" },
+      { to: "/components/textarea", label: "Textarea" },
     ],
   },
   {
