@@ -217,7 +217,7 @@ export function Home() {
             RuTube
           </a>
           <a
-            href="https://vkvideo.ru/video-238518064_456239024"
+            href="https://vkvideo.ru/video-238518064_456239025"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-md border px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
