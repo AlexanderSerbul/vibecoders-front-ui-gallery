@@ -225,6 +225,15 @@ export function Home() {
             <Play className="size-4" />
             VK Видео
           </a>
+          <a
+            href="https://youtu.be/CJ7RvKborkE"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-md border px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
+          >
+            <Play className="size-4" />
+            YouTube
+          </a>
         </div>
       </section>
 
