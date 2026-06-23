@@ -11,7 +11,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `npm run lint` — run ESLint over the repo
 - `npm run test:e2e` — Playwright smoke tests (visit every route, fail on any console/page error)
 
-No unit-test runner is configured; a **Playwright suite** covers end-to-end page rendering + Data Table interactions (`npm run test:e2e`). To validate a change, run `npm run lint` and `npm run build` (the latter type-checks first), or check behavior in `npm run dev`.
+No unit-test runner is configured; a **Playwright suite** covers end-to-end page rendering + Data Table interactions (`npm run test:e2e`). To validate a change, run `npm run lint` and `npm run build` (the latter type-checks first), or check behavior in `npm run dev`. **Before committing a change to a component, page, or app logic, run the full e2e suite (`npm run test:e2e`) and confirm it is green** — it runs **both** the smoke tests (visit every route, fail on any console/page error — catching pages that silently broke) **and** the per-component browser-interaction tests (click/fill/hover, then assert ARIA state + on-screen effect) — coverage lint/typecheck can't give. For trivial copy/text one-liners, lint + typecheck + a preview check can suffice (say so explicitly).
 
 ## Stack
 
