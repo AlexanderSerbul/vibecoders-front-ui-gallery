@@ -31,6 +31,25 @@ const DEPLOY_PROMPT =
   "Мой ключ: vibe_api_…\n" +
   "Документация: https://vibecode.bitrix24.tech/v1/me"
 
+const VIDEO_LESSONS = [
+  {
+    title: "Первые шаги",
+    links: [
+      { label: "RuTube", href: "https://rutube.ru/video/6e21169231ae6895cb4d812097f6a234/" },
+      { label: "VK Видео", href: "https://vkvideo.ru/video-238518064_456239025" },
+      { label: "YouTube", href: "https://youtu.be/CJ7RvKborkE" },
+    ],
+  },
+  {
+    title: "Создаём дистрибутив, готовимся к деплою",
+    links: [
+      { label: "RuTube", href: "https://rutube.ru/video/9f1d88bbc432726b243a22a9f0c316aa/" },
+      { label: "VK Видео", href: "https://vkvideo.ru/video-238518064_456239026" },
+      { label: "YouTube", href: "https://youtu.be/e-AdIIaYKjo" },
+    ],
+  },
+]
+
 const stack = [
   {
     name: "React",
@@ -206,34 +225,26 @@ export function Home() {
           как вайбкодер создаёт такой сайт в Claude — от пустого проекта до
           публикации:
         </p>
-        <div className="mt-4 flex flex-wrap gap-3">
-          <a
-            href="https://rutube.ru/video/6e21169231ae6895cb4d812097f6a234/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-md border px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
-          >
-            <Play className="size-4" />
-            RuTube
-          </a>
-          <a
-            href="https://vkvideo.ru/video-238518064_456239025"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-md border px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
-          >
-            <Play className="size-4" />
-            VK Видео
-          </a>
-          <a
-            href="https://youtu.be/CJ7RvKborkE"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-md border px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
-          >
-            <Play className="size-4" />
-            YouTube
-          </a>
+        <div className="mt-4 space-y-6">
+          {VIDEO_LESSONS.map((lesson) => (
+            <div key={lesson.title}>
+              <p className="font-medium">{lesson.title}</p>
+              <div className="mt-2 flex flex-wrap gap-3">
+                {lesson.links.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-md border px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
+                  >
+                    <Play className="size-4" />
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
