@@ -48,6 +48,14 @@ const VIDEO_LESSONS = [
       { label: "YouTube", href: "https://youtu.be/e-AdIIaYKjo" },
     ],
   },
+  {
+    title: "Как деплоить приложение на вайб-кодинг платформу Битрикс24",
+    links: [
+      { label: "RuTube", href: "https://rutube.ru/video/0e7c64a2a5c3796879b42efebc0af6e5/" },
+      { label: "VK Видео", href: "https://vkvideo.ru/video-238518064_456239027" },
+      { label: "YouTube", href: "https://youtu.be/2q0yqnVcK5Q" },
+    ],
+  },
 ]
 
 const stack = [

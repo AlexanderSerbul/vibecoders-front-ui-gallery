@@ -10,6 +10,7 @@
 
 - Первые шаги: [RuTube](https://rutube.ru/video/6e21169231ae6895cb4d812097f6a234/) · [VK Видео](https://vkvideo.ru/video-238518064_456239025) · [YouTube](https://youtu.be/CJ7RvKborkE)
 - Создаём дистрибутив, готовимся к деплою: [RuTube](https://rutube.ru/video/9f1d88bbc432726b243a22a9f0c316aa/) · [VK Видео](https://vkvideo.ru/video-238518064_456239026) · [YouTube](https://youtu.be/e-AdIIaYKjo)
+- Как деплоить приложение на вайб-кодинг платформу Битрикс24: [RuTube](https://rutube.ru/video/0e7c64a2a5c3796879b42efebc0af6e5/) · [VK Видео](https://vkvideo.ru/video-238518064_456239027) · [YouTube](https://youtu.be/2q0yqnVcK5Q)
 
 **Стек:** Vite · React · TypeScript · Tailwind CSS v4 · shadcn/ui
 
