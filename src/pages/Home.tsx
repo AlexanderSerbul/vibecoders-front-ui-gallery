@@ -56,6 +56,22 @@ const VIDEO_LESSONS = [
       { label: "YouTube", href: "https://youtu.be/2q0yqnVcK5Q" },
     ],
   },
+  {
+    title: "React — добавляем к проекту Git, выгружаем на GitHub и деплоим изменения на вайбкод платформу Битрикс24",
+    links: [
+      { label: "RuTube", href: "https://rutube.ru/video/03494f498fe1de24ca0f81622b2fa00d/" },
+      { label: "VK Видео", href: "https://vkvideo.ru/video-238518064_456239028" },
+      { label: "YouTube", href: "https://youtu.be/uZLjkTavoq4" },
+    ],
+  },
+  {
+    title: "React — деплоим в Галактику, добавляем адреса страниц и линтер",
+    links: [
+      { label: "RuTube", href: "https://rutube.ru/video/ddc7129ed27c32e18c6ff566ff35f964/" },
+      { label: "VK Видео", href: "https://vkvideo.ru/video-238518064_456239030" },
+      { label: "YouTube", href: "https://youtu.be/TVpqk7BdDMU" },
+    ],
+  },
 ]
 
 const stack = [
