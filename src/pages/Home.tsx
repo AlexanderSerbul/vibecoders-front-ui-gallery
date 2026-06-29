@@ -72,6 +72,14 @@ const VIDEO_LESSONS = [
       { label: "YouTube", href: "https://youtu.be/TVpqk7BdDMU" },
     ],
   },
+  {
+    title: "React — добавляем автоматические браузерные тесты в Playwright, переходим на TypeScript",
+    links: [
+      { label: "RuTube", href: "https://rutube.ru/video/fc8dfad7b7df27c1270756e8883bf23c/" },
+      { label: "VK Видео", href: "https://vkvideo.ru/video-238518064_456239031" },
+      { label: "YouTube", href: "https://youtu.be/VWQh1Elyhiw" },
+    ],
+  },
 ]
 
 const stack = [
