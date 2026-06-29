@@ -80,6 +80,14 @@ const VIDEO_LESSONS = [
       { label: "YouTube", href: "https://youtu.be/VWQh1Elyhiw" },
     ],
   },
+  {
+    title: "React — внедряем SEO-оптимизацию, добавляем пререндер (SSG) с гидрацией на вайбкодинг платформе Битрикс24",
+    links: [
+      { label: "RuTube", href: "https://rutube.ru/video/2bc65a2009f1b4640e4b90eeba93d1d3/" },
+      { label: "VK Видео", href: "https://vkvideo.ru/video-238518064_456239033" },
+      { label: "YouTube", href: "https://youtu.be/J3Kf5yO6tpA" },
+    ],
+  },
 ]
 
 const stack = [
